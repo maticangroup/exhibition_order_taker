@@ -29,7 +29,8 @@ endif;
     <meta name="keywords" content="">
 
     <!-- ==== Favicon ==== -->
-    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="icon" href="http://bitaplastic.com/wp-content/themes/bita-fa/option-tree/assets/images/logo.png"
+          type="image/png">
 
     <!-- ==== Google Font ==== -->
     <link rel="stylesheet"
