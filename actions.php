@@ -112,10 +112,27 @@ function get_all($what)
         $ordersArray = [];
         foreach ($orders as $order) {
             $orderJson = file_get_contents($path . '/' . $order);
-            $ordersArray[] = json_decode($orderJson, true);
+            $orderArray = json_decode($orderJson, true);
+
+            $order = new Order();
+            $order->setCustomer(retrieve('customer', $orderArray, true));
+            $order->setSerial($orderArray['serial']);
+            $order->setCreateDate($orderArray['createDate']);
+            $order->setTaker($orderArray['orderTaker']);
+            $orderItemModelArray = [];
+            foreach ($orderArray['orderItems'] as $orderItem) {
+                $orderItemDecrypted = json_decode($orderItem, true);
+                $orderItemModel = new OrderItem();
+                $orderItemModel->setPrice($orderItemDecrypted['price']);
+                $orderItemModel->setCount($orderItemDecrypted['count']);
+                $orderItemModel->setProduct(retrieve('product', $orderItemDecrypted['product'], true));
+                $orderItemModelArray[] = $orderItemModel;
+            }
+            $order->setOrderItems($orderItemModelArray);
+            $ordersArray[] = $order;
         }
-        print_r($ordersArray);
-        die("sss");
+        return $ordersArray;
+
     }
     if ($what === 'customers') {
         $path = get_path(__DIR__ . '/data/customers');
