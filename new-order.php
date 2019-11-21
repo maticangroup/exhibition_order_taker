@@ -18,10 +18,11 @@ $order = retrieve('order', $_REQUEST['cid'], true);
 /**
  * @var $products Product[]
  */
-$products = [];
+//$products = [];
+$products = get_all('products');
 
 if (isset($_REQUEST['q'])) {
-    $products = get_all('products');
+
     $query = $_REQUEST['q'];
     if ($query !== "") {
         foreach ($products as $key => $product) {
@@ -142,15 +143,12 @@ if (isset($_REQUEST['q'])) {
                                 <th>Product Count</th>
                                 <th>Product Price</th>
                                 <th>Total Product Price</th>
+                                <th>Action</th>
                             </tr>
                             </thead>
                             <tbody>
                             <?php
-<<<<<<< HEAD
                             $totalPrice = 0;
-=======
-
->>>>>>> 0beb66ab3dde352332b7fdfc5adb7922f98e163b
                             foreach ($order->getOrderItems() as $orderItem) :?>
                                 <tr>
                                     <td><?= $orderItem->getProduct()->getSerial(); ?></td>
@@ -161,6 +159,13 @@ if (isset($_REQUEST['q'])) {
                                         <script>
                                             document.write(addCommas( <?= (str_replace([','], '', $orderItem->getPrice()) * $orderItem->getCount()) ?> ))
                                         </script>
+                                    </td>
+                                    <td>
+                                        <form action="#" method="post">
+                                            <input type="hidden">
+                                            <input type="hidden">
+                                            <input type="submit" class="btn btn-rounded btn-danger" value="remove">
+                                        </form>
                                     </td>
 
                                 </tr>
@@ -173,6 +178,7 @@ if (isset($_REQUEST['q'])) {
                                         document.write(addCommas( <?= $totalPrice; ?> ))
                                     </script>
                                 </td>
+                                <td></td>
                             </tr>
                             </tbody>
                         </table>
