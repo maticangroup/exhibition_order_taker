@@ -175,6 +175,9 @@ class Order
      */
     public function setOrderItems($orderItems)
     {
+        foreach ($orderItems as $orderItem) {
+
+        }
         $this->orderItems = $orderItems;
     }
 
@@ -344,9 +347,6 @@ class OrderItem
 
     public function __toString()
     {
-        $this->getPrice();
-        $this->getProduct();
-        $this->getCount();
 
         $orderItemArray = [
             'price' => $this->getPrice(),

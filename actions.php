@@ -271,3 +271,10 @@ function import_products()
     }
     return true;
 }
+
+function remove_order($orderSerial)
+{
+    $path = get_path(__DIR__ . '/data/products/' . $orderSerial . '.txt');
+    unlink($path);
+    return true;
+}

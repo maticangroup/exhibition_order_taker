@@ -10,9 +10,21 @@ $count = $_REQUEST['count'];
  */
 $getOrder = retrieve('order', $customerId, true);
 
+$alreadyAddedOrderItems = $getOrder->getOrderItems();
+$orderItem = new OrderItem();
+$product = retrieve('product', $productId);
+
+$orderItem->setPrice($product['price']);
+$orderItem->setProduct(json_encode($product));
+$orderItem->setCount($count);
+
+$alreadyAddedOrderItems[] = $orderItem;
+$getOrder->setOrderItems($alreadyAddedOrderItems);
+
+remove_order($getOrder->getSerial());
 
 
-print_r($getOrder);
-die("sss");
-//$alreadyOrderItems = ;
+save('order', $getOrder);
+
+redirect('/new-order.php?cid=' . $customerId);
 
