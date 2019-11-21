@@ -1,1 +1,0 @@
-{"customer":"5926529","serial":"5926529","createDate":"12-12-12","orderStatus":"open","orderTaker":"09120342273","orderItems":["{\"price\":\"350,000\",\"product\":\"7000100013012--13\",\"count\":\"12\"}"]}

@@ -12,7 +12,7 @@ $count = $_REQUEST['count'];
  */
 $getOrder = retrieve('order', $customerId, true);
 
-$alreadyAddedOrderItems = json_decode($getOrder->getOrderItems(), true);
+$alreadyAddedOrderItems = $getOrder->getOrderItems();
 
 
 /**
@@ -26,11 +26,13 @@ $orderItem->setPrice($product->getPrice());
 $orderItem->setProduct($product);
 $orderItem->setCount($count);
 
-$alreadyAddedOrderItems[] = (string)$orderItem;
+$alreadyAddedOrderItems[] = $orderItem;
 
 $getOrder->setCustomer($customerId);
 
 $getOrder->setOrderItems($alreadyAddedOrderItems);
+
+
 
 remove_customer_order($getOrder->getSerial());
 

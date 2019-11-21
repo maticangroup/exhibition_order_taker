@@ -146,7 +146,11 @@ if (isset($_REQUEST['q'])) {
                             </thead>
                             <tbody>
                             <?php
+<<<<<<< HEAD
                             $totalPrice = 0;
+=======
+
+>>>>>>> 0beb66ab3dde352332b7fdfc5adb7922f98e163b
                             foreach ($order->getOrderItems() as $orderItem) :?>
                                 <tr>
                                     <td><?= $orderItem->getProduct()->getSerial(); ?></td>

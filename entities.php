@@ -281,13 +281,19 @@ class Order
     public function __toString()
     {
 
+        $orderItems = $this->getOrderItems();
+        $ordersList = [];
+        foreach ($orderItems as $orderItem) {
+            $ordersList[] = (string)$orderItem;
+        }
+
         $order = [
             'customer' => $this->getCustomer(),
             'serial' => $this->getSerial(),
             'createDate' => $this->getCreateDate(),
             'orderStatus' => $this->getOrderStatus(),
             'orderTaker' => $this->getTaker(),
-            'orderItems' => $this->getOrderItems()
+            'orderItems' => $ordersList
         ];
         return json_encode($order);
     }
