@@ -9,6 +9,7 @@ endif;
 ?>
 <?php
 if (isset($_REQUEST['customer-name'])) {
+    
     $customer = new Customer();
     $customer->setSerial(get_serial());
     $customer->setName($_REQUEST['customer-name']);
@@ -63,7 +64,7 @@ if (isset($_REQUEST['customer-name'])) {
                 <div class="form-group">
                     <label>
                         <span class="label-text">Mobile</span>
-                        <input type="text" name="customer-mobile"
+                        <input required="required" type="text" name="customer-mobile"
                                class="form-control">
                     </label>
                 </div>
