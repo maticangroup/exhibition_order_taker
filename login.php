@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+<?php require "users.php"; ?>
+<?php require "actions.php"; ?>
+<?php require "entities.php"; ?>
+
+>>>>>>> 9de9e8ba171625fda2163084a1cd282f22cb6661
 <?php require "head.php"; ?>
 <?php
 if (isset($_REQUEST['username'])):

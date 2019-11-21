@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+=======
+<?php require "users.php"; ?>
+<?php require "actions.php"; ?>
+<?php require "entities.php"; ?>
+<?php
+if ($_SERVER['REQUEST_URI'] !== '/login.php'):
+    current_user();
+endif;
+?>
+>>>>>>> 9de9e8ba171625fda2163084a1cd282f22cb6661
 <?php
 require "head.php";
 
@@ -35,10 +46,17 @@ if (isset($_REQUEST['q'])) {
     </div>
     <div class="order-create-date">
         <?= $order->getCreateDate() ?>
+<<<<<<< HEAD
     </div>
     <div class="order-status">
         <?= $order->getOrderStatus() ?>
     </div>
+=======
+    </div>
+    <div class="order-status">
+        <?= $order->getOrderStatus() ?>
+    </div>
+>>>>>>> 9de9e8ba171625fda2163084a1cd282f22cb6661
 </div>
 <div class="single-order-section">
     <div class="search">
@@ -56,10 +74,17 @@ if (isset($_REQUEST['q'])) {
                 </div>
                 <div class="product-name">
                     <?= $product->getName() ?>
+<<<<<<< HEAD
                 </div>
                 <div class="product-price">
                     <?= $product->getPrice() ?>
                 </div>
+=======
+                </div>
+                <div class="product-price">
+                    <?= $product->getPrice() ?>
+                </div>
+>>>>>>> 9de9e8ba171625fda2163084a1cd282f22cb6661
                 <div class="product-option">
                     <form action="add-to-cart.php" method="get">
                         <input type="hidden" name="cid" value="<?= $_REQUEST['cid'] ?>">

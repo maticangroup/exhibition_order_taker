@@ -1,63 +1,14 @@
-<?php require "head.php";
-?>
-    <div class="form">
-        <form action="#">
 
-
-            <div class="form-element">
-                <div class="element-title">
-                    Name
-                </div>
-                <div class="element-input">
-                    <input type="text" name="customer-name">
-                </div>
-            </div>
-            <div class="form-element">
-                <div class="element-title">
-                    Family
-                </div>
-                <div class="element-input">
-                    <input type="text" name="customer-family">
-                </div>
-            </div>
-            <div class="form-element">
-                <div class="element-title">
-                    Mobile
-                </div>
-                <div class="element-input">
-                    <input type="text" name="customer-mobile">
-                </div>
-            </div>
-            <div class="form-element">
-                <div class="element-title">
-                    Telephone
-                </div>
-                <div class="element-input">
-                    <input type="text" name="customer-telephone">
-                </div>
-            </div>
-            <div class="form-element">
-                <div class="element-title">
-                    Address
-                </div>
-                <div class="element-input">
-                    <input type="text" name="customer-address">
-                </div>
-            </div>
-            <div class="form-element submit">
-                <div class="element-title">
-                </div>
-                <div class="element-input">
-                    <input type="submit" value="Value">
-                </div>
-            </div>
-        </form>
-    </div>
-<?php require "foot.php"; ?>
-
+<?php require "users.php"; ?>
+<?php require "actions.php"; ?>
+<?php require "entities.php"; ?>
 
 <?php
-
+if ($_SERVER['REQUEST_URI'] !== '/login.php'):
+    current_user();
+endif;
+?>
+<?php
 if (isset($_REQUEST['customer-name'])) {
     $customer = new Customer();
     $customer->setSerial(get_serial());
@@ -81,3 +32,60 @@ if (isset($_REQUEST['customer-name'])) {
     redirect('/init-customer-order.php?cid=' . $customer->getSerial());
 }
 ?>
+<?php require "head.php"; ?>
+<div class="form">
+    <form action="/new-customer-order.php" method="post">
+
+
+        <div class="form-element">
+            <div class="element-title">
+                Name
+            </div>
+            <div class="element-input">
+                <input type="text" name="customer-name">
+            </div>
+        </div>
+        <div class="form-element">
+            <div class="element-title">
+                Family
+            </div>
+            <div class="element-input">
+                <input type="text" name="customer-family">
+            </div>
+        </div>
+        <div class="form-element">
+            <div class="element-title">
+                Mobile
+            </div>
+            <div class="element-input">
+                <input type="text" name="customer-mobile">
+            </div>
+        </div>
+        <div class="form-element">
+            <div class="element-title">
+                Telephone
+            </div>
+            <div class="element-input">
+                <input type="text" name="customer-telephone">
+            </div>
+        </div>
+        <div class="form-element">
+            <div class="element-title">
+                Address
+            </div>
+            <div class="element-input">
+                <input type="text" name="customer-address">
+            </div>
+        </div>
+        <div class="form-element submit">
+            <div class="element-title">
+            </div>
+            <div class="element-input">
+                <input type="submit" value="Value">
+            </div>
+        </div>
+    </form>
+</div>
+<?php require "foot.php"; ?>
+
+

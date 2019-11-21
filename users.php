@@ -1,4 +1,5 @@
 <?php
+session_start();
 $users = [
     '09120342273' =>
         [
