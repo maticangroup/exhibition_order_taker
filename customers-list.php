@@ -32,7 +32,7 @@ if (isset($_REQUEST['q'])) {
     <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="panel">
             <div class="records--header">
-                <div class="title fa-shopping-bag">
+                <div class="title fa-address-book">
                     <h3 class="h3">All Customers</h3>
                     <p>Found Total <?= count($customers); ?> Customers</p>
                 </div>

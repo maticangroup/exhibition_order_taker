@@ -110,25 +110,27 @@ function get_all($what)
         unset($orders[0]);
         unset($orders[1]);
         $ordersArray = [];
-        foreach ($orders as $order) {
-            $orderJson = file_get_contents($path . '/' . $order);
-            $orderArray = json_decode($orderJson, true);
-            $order = new Order();
-            $order->setCustomer(retrieve('customer', $orderArray['customer'], true));
-            $order->setSerial($orderArray['serial']);
-            $order->setCreateDate($orderArray['createDate']);
-            $order->setTaker($orderArray['orderTaker']);
-            $orderItemModelArray = [];
-            foreach ($orderArray['orderItems'] as $orderItem) {
-                $orderItemDecrypted = json_decode($orderItem, true);
-                $orderItemModel = new OrderItem();
-                $orderItemModel->setPrice($orderItemDecrypted['price']);
-                $orderItemModel->setCount($orderItemDecrypted['count']);
-                $orderItemModel->setProduct(retrieve('product', $orderItemDecrypted['product'], true));
-                $orderItemModelArray[] = $orderItemModel;
+        if ($orders) {
+            foreach ($orders as $order) {
+                $orderJson = file_get_contents($path . '/' . $order);
+                $orderArray = json_decode($orderJson, true);
+                $order = new Order();
+                $order->setCustomer(retrieve('customer', $orderArray['customer'], true));
+                $order->setSerial($orderArray['serial']);
+                $order->setCreateDate($orderArray['createDate']);
+                $order->setTaker($orderArray['orderTaker']);
+                $orderItemModelArray = [];
+                foreach ($orderArray['orderItems'] as $orderItem) {
+                    $orderItemDecrypted = json_decode($orderItem, true);
+                    $orderItemModel = new OrderItem();
+                    $orderItemModel->setPrice($orderItemDecrypted['price']);
+                    $orderItemModel->setCount($orderItemDecrypted['count']);
+                    $orderItemModel->setProduct(retrieve('product', $orderItemDecrypted['product'], true));
+                    $orderItemModelArray[] = $orderItemModel;
+                }
+                $order->setOrderItems($orderItemModelArray);
+                $ordersArray[] = $order;
             }
-            $order->setOrderItems($orderItemModelArray);
-            $ordersArray[] = $order;
         }
         return $ordersArray;
 

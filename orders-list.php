@@ -19,7 +19,7 @@ $orders = get_all('orders');
         <div class="col-md-12 col-sm-12 col-xs-12">
             <div class="panel">
                 <div class="records--header">
-                    <div class="title fa-shopping-bag">
+                    <div class="title fa-shopping-cart">
                         <h3 class="h3">All Orders</h3>
                         <p>Found Total <?= count($orders); ?> Orders</p>
                     </div>
