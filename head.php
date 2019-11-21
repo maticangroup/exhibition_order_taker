@@ -65,7 +65,8 @@ endif;
         <div class="navbar--header">
             <!-- Logo Start -->
             <a href="index.html" class="logo">
-                <img src="assets/img/logo.png" alt="">
+                <img src="http://bitaplastic.com/wp-content/themes/bita-fa/option-tree/assets/images/logo.png"
+                     alt="Bita">
             </a>
             <!-- Logo End -->
 
