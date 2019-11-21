@@ -12,5 +12,22 @@ $productId = $_REQUEST['product_id'];
  */
 $getOrder = retrieve('order', $customerId, true);
 
-print_r($getOrder);
-die;
+/**
+ * @var $orderItems OrderItem[]
+ */
+$orderItems = $getOrder->getOrderItems();
+
+foreach ($orderItems as $key => $orderItem) {
+    if ($orderItem->getProduct()->getSerial() === $productId) {
+        unset($orderItems[$key]);
+    }
+}
+
+$getOrder->setOrderItems($orderItems);
+$getOrder->setCustomer($customerId);
+
+remove_customer_order($getOrder->getSerial());
+
+save('order', $getOrder);
+
+redirect('/new-order.php?cid=' . $customerId);

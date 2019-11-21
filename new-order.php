@@ -14,7 +14,8 @@ require "head.php";
  * @var $order Order
  */
 $order = retrieve('order', $_REQUEST['cid'], true);
-
+//print_r($order);
+//die;
 /**
  * @var $products Product[]
  */
@@ -161,9 +162,10 @@ if (isset($_REQUEST['q'])) {
                                         </script>
                                     </td>
                                     <td>
-                                        <form action="#" method="post">
-                                            <input type="hidden">
-                                            <input type="hidden">
+                                        <form action="remove-from-cart.php">
+                                            <input type="hidden" name="cid" value="<?= $_REQUEST['cid'] ?>">
+                                            <input type="hidden" name="product_id"
+                                                   value="<?= $orderItem->getProduct()->getSerial() ?>">
                                             <input type="submit" class="btn btn-rounded btn-danger" value="remove">
                                         </form>
                                     </td>
