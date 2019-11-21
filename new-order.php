@@ -18,10 +18,11 @@ $order = retrieve('order', $_REQUEST['cid'], true);
 /**
  * @var $products Product[]
  */
-$products = [];
+//$products = [];
+$products = get_all('products');
 
 if (isset($_REQUEST['q'])) {
-    $products = get_all('products');
+
     $query = $_REQUEST['q'];
     if ($query !== "") {
         foreach ($products as $key => $product) {
@@ -142,24 +143,42 @@ if (isset($_REQUEST['q'])) {
                                 <th>Product Count</th>
                                 <th>Product Price</th>
                                 <th>Total Product Price</th>
+                                <th>Action</th>
                             </tr>
                             </thead>
                             <tbody>
                             <?php
-
+                            $totalPrice = 0;
                             foreach ($order->getOrderItems() as $orderItem) :?>
                                 <tr>
                                     <td><?= $orderItem->getProduct()->getSerial(); ?></td>
                                     <td><?= $orderItem->getProduct()->getName(); ?></td>
                                     <td><?= $orderItem->getCount(); ?></td>
                                     <td><?= $orderItem->getPrice() ?></td>
-                                    <td><?= (str_replace([','], '', $orderItem->getPrice()) * $orderItem->getCount()) ?></td>
+                                    <td>
+                                        <script>
+                                            document.write(addCommas( <?= (str_replace([','], '', $orderItem->getPrice()) * $orderItem->getCount()) ?> ))
+                                        </script>
+                                    </td>
+                                    <td>
+                                        <form action="#" method="post">
+                                            <input type="hidden">
+                                            <input type="hidden">
+                                            <input type="submit" class="btn btn-rounded btn-danger" value="remove">
+                                        </form>
+                                    </td>
+
                                 </tr>
-                            <?php endforeach; ?>
+                                <?php $totalPrice += str_replace([','], '', $orderItem->getPrice()) * $orderItem->getCount(); endforeach; ?>
 
                             <tr>
                                 <td colspan="4"><strong>Total Price</strong></td>
-                                <td>Static</td>
+                                <td>
+                                    <script>
+                                        document.write(addCommas( <?= $totalPrice; ?> ))
+                                    </script>
+                                </td>
+                                <td></td>
                             </tr>
                             </tbody>
                         </table>
