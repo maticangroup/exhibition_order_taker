@@ -8,7 +8,7 @@ endif;
 ?>
 
 <?php require "head.php";
-
+$order = retrieve('order', $_REQUEST['cid'], true);
 ?>
     <h1>Single order</h1>
     <div class="single-order-section">

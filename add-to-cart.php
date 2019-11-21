@@ -11,9 +11,17 @@ $count = $_REQUEST['count'];
  * @var $getOrder Order
  */
 $getOrder = retrieve('order', $customerId, true);
-
+/**
+ * @var $alreadyAddedOrderItems OrderItem[]
+ */
 $alreadyAddedOrderItems = $getOrder->getOrderItems();
-
+foreach ($alreadyAddedOrderItems as $key => $addedOrderItem) {
+    if ($addedOrderItem->getProduct()->getSerial() === $productId) {
+        $alreadyAddedOrderItems[$key]->setCount(
+            $addedOrderItem->getCount() + $count
+        );
+    }
+}
 
 /**
  * @var $product Product
@@ -31,7 +39,6 @@ $alreadyAddedOrderItems[] = $orderItem;
 $getOrder->setCustomer($customerId);
 
 $getOrder->setOrderItems($alreadyAddedOrderItems);
-
 
 
 remove_customer_order($getOrder->getSerial());
