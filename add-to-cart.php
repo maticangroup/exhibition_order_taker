@@ -12,36 +12,30 @@ $count = $_REQUEST['count'];
  */
 $getOrder = retrieve('order', $customerId, true);
 
-$alreadyAddedOrderItems = $getOrder->getOrderItems();
+$alreadyAddedOrderItems = json_decode($getOrder->getOrderItems(), true);
+
+
+/**
+ * @var $product Product
+ */
+$product = retrieve('product', $productId, true);
+
+
 $orderItem = new OrderItem();
-$product = retrieve('product', $productId);
-//<<<<<<< HEAD
-//
-//$orderItem->setPrice($product['price']);
-//$orderItem->setProduct(json_encode($product));
-//$orderItem->setCount($count);
-//
-//$alreadyAddedOrderItems[] = $orderItem;
-//$getOrder->setOrderItems($alreadyAddedOrderItems);
-//
-//remove_order($getOrder->getSerial());
-//
-//
-//save('order', $getOrder);
-//
-//=======
-//
-//$orderItem->setPrice($product['price']);
-//$orderItem->setProduct(json_encode($product));
-//$orderItem->setCount($count);
-//
-//$alreadyAddedOrderItems[] = $orderItem;
-//$getOrder->setOrderItems($alreadyAddedOrderItems);
-//
-//remove_order($getOrder->getSerial());
-//
-//save('order', $getOrder);
-//
-//>>>>>>> 9de9e8ba171625fda2163084a1cd282f22cb6661
-//redirect('/new-order.php?cid=' . $customerId);
+$orderItem->setPrice($product->getPrice());
+$orderItem->setProduct($product);
+$orderItem->setCount($count);
+
+$alreadyAddedOrderItems[] = (string)$orderItem;
+
+
+
+$getOrder->setOrderItems(json_encode($alreadyAddedOrderItems));
+
+remove_customer_order($getOrder->getSerial());
+
+save('order', $getOrder);
+
+redirect('/new-order.php?cid=' . $customerId);
+
 

@@ -87,7 +87,7 @@ function save($what, $data)
         if (!file_exists($path)) {
             mkdir($path);
         }
-        file_put_contents($path . '/' . $data->getCustomer() . '.txt', (string)$data);
+        file_put_contents($path . '/' . $data->getSerial() . '.txt', (string)$data);
     }
     if ($what === 'product') {
         /**
@@ -205,7 +205,16 @@ function retrieve($type, $serial, $instance = false)
         $path = get_path(__DIR__ . '/data/products/' . $serial . '.txt');
         if (file_exists($path)) {
             $content = file_get_contents($path);
-            return json_decode($content, true);
+            $content = json_decode($content, true);
+            if ($instance) {
+
+                $productModel = new Product();
+                $productModel->setPrice($content['price']);
+                $productModel->setSerial($content['serial']);
+                $productModel->setName($content['name']);
+                return $productModel;
+            }
+            return $content;
         }
         return false;
     }
@@ -215,13 +224,14 @@ function retrieve($type, $serial, $instance = false)
 
             $content = json_decode(file_get_contents($path), true);
             if ($instance) {
-
                 $order = new Order();
                 $order->setSerial($content['serial']);
                 $order->setTaker($content['orderTaker']);
                 $order->setOrderStatus($content['orderStatus']);
                 $order->setCustomer(retrieve('customer', $content['customer'], true));
                 $order->setCreateDate($content['createDate']);
+                $order->setOrderItems($content['orderItems']);
+
                 return $order;
             }
             return $content;

@@ -151,23 +151,11 @@ class Order
     private $orderItems;
 
     /**
-     * @return OrderItem[]
+     * @return mixed
      */
     public function getOrderItems()
     {
-        $orderItems = json_decode($this->orderItems, true);
-        $orderItemsArray = [];
-        if ($orderItems) {
-            foreach ($orderItems as $orderItem) {
-                $orderItemModel = new OrderItem();
-//            $orderItemModel->setCount($);
-//            $orderItemModel->setProduct();
-//            $orderItemModel->setPrice();
-//            $orderItemModel->setProductSerial();
-                $orderItemsArray[] = $orderItemModel;
-            }
-        }
-        return $orderItemsArray;
+        return $this->orderItems;
     }
 
     /**
@@ -175,11 +163,33 @@ class Order
      */
     public function setOrderItems($orderItems)
     {
-        foreach ($orderItems as $orderItem) {
-
-        }
         $this->orderItems = $orderItems;
     }
+
+//    /**
+//     * @return OrderItem[]
+//     */
+//    public function getOrderItems()
+//    {
+//        return $this->orderItems;
+//    }
+//
+//    /**
+//     * @param mixed $orderItems
+//     */
+//    public function setOrderItems($orderItems)
+//    {
+//        $orderItems = json_decode($orderItems, true);
+//        $orderItemModelArray = [];
+//        foreach ($orderItems as $orderItem) {
+//            $orderItemModel = new OrderItem();
+//            $orderItemModel->setPrice($orderItem['price']);
+//            $orderItemModel->setCount($orderItem['count']);
+//            $orderItemModel->setProduct(retrieve('product', $orderItem['product'], true));
+//            $orderItemModelArray[] = $orderItemModel;
+//        }
+//        $this->orderItems = $orderItemModelArray;
+//    }
 
     /**
      * @return Customer
@@ -350,7 +360,7 @@ class OrderItem
 
         $orderItemArray = [
             'price' => $this->getPrice(),
-            'product' => (string)$this->getProduct(),
+            'product' => $this->getProduct()->getSerial(),
             'count' => $this->getCount(),
         ];
 
