@@ -147,7 +147,6 @@ if (isset($_REQUEST['q'])) {
                             <tbody>
                             <?php
 
-
                             foreach ($order->getOrderItems() as $orderItem) :?>
                                 <tr>
                                     <td><?= $orderItem->getProduct()->getSerial(); ?></td>
