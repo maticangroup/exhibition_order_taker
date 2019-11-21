@@ -140,18 +140,20 @@ function get_all($what)
         unset($customers[0]);
         unset($customers[1]);
         $customersArray = [];
-        foreach ($customers as $customer) {
-            $customerJson = file_get_contents($path . '/' . $customer);
-            $customerArray = json_decode($customerJson, true);
-            $customerModel = new Customer();
-            $customerModel->setName($customerArray['name']);
-            $customerModel->setMobile($customerArray['mobile']);
-            $customerModel->setRegisteredBy($customerArray['registered_by']);
-            $customerModel->setAddress($customerArray['address']);
-            $customerModel->setTelephone($customerArray['telephone']);
-            $customerModel->setFamily($customerArray['family']);
-            $customerModel->setSerial($customerArray['serial']);
-            $customersArray[] = $customerModel;
+        if ($customers) {
+            foreach ($customers as $customer) {
+                $customerJson = file_get_contents($path . '/' . $customer);
+                $customerArray = json_decode($customerJson, true);
+                $customerModel = new Customer();
+                $customerModel->setName($customerArray['name']);
+                $customerModel->setMobile($customerArray['mobile']);
+                $customerModel->setRegisteredBy($customerArray['registered_by']);
+                $customerModel->setAddress($customerArray['address']);
+                $customerModel->setTelephone($customerArray['telephone']);
+                $customerModel->setFamily($customerArray['family']);
+                $customerModel->setSerial($customerArray['serial']);
+                $customersArray[] = $customerModel;
+            }
         }
         return $customersArray;
     }
