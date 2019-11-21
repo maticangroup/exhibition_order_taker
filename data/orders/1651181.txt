@@ -1,1 +1,0 @@
-{"customer":1651181,"serial":"1651181","createDate":{"date":"2019-11-21 13:22:00.658909","timezone_type":3,"timezone":"UTC"},"orderStatus":"open","orderTaker":"09120342273","orderItems":""}

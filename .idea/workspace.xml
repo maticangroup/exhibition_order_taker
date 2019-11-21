@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="62d9aa91-de9b-4265-8951-4420b45f6188" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/actions.php" beforeDir="false" afterPath="$PROJECT_DIR$/actions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/add-to-cart.php" beforeDir="false" afterPath="$PROJECT_DIR$/add-to-cart.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/orders/1651181.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/orders/2814504.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entities.php" beforeDir="false" afterPath="$PROJECT_DIR$/entities.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-order.php" beforeDir="false" afterPath="$PROJECT_DIR$/new-order.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,8 +20,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/new-order.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="528">
-              <caret line="24" column="13" lean-forward="true" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+            <state relative-caret-position="681">
+              <caret line="73" column="43" selection-start-line="73" selection-start-column="43" selection-end-line="73" selection-end-column="43" />
               <folding>
                 <element signature="e#658#722#0#HTML" />
                 <element signature="e#702#705#0#PHP" />
@@ -34,11 +39,6 @@
                 <element signature="e#1728#1731#0#PHP" />
                 <element signature="e#1802#1908#0#HTML" />
                 <element signature="e#1854#1857#0#PHP" />
-                <element signature="e#2496#2819#0#HTML" />
-                <element signature="e#2562#2800#0#HTML" />
-                <element signature="e#2579#2637#0#HTML" />
-                <element signature="e#2654#2710#0#HTML" />
-                <element signature="e#2727#2784#0#HTML" />
               </folding>
             </state>
           </provider>
@@ -56,22 +56,129 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/entities.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="389">
-              <caret line="204" column="5" selection-start-line="204" selection-start-column="5" selection-end-line="204" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/head.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
+            <state relative-caret-position="681">
+              <caret line="289" column="15" lean-forward="true" selection-start-line="289" selection-start-column="15" selection-end-line="289" selection-end-column="15" />
+              <folding>
+                <element signature="n#Customer#0;n#!!top" />
+                <element signature="e#184#216#0#PHP" />
+                <element signature="n#getRegisteredBy#0;n#Customer#0;n#!!top" />
+                <element signature="e#308#353#0#PHP" />
+                <element signature="n#setRegisteredBy#0;n#Customer#0;n#!!top" />
+                <element signature="e#468#500#0#PHP" />
+                <element signature="n#getSerial#0;n#Customer#0;n#!!top" />
+                <element signature="e#580#619#0#PHP" />
+                <element signature="n#setSerial#0;n#Customer#0;n#!!top" />
+                <element signature="e#709#741#0#PHP" />
+                <element signature="n#getName#0;n#Customer#0;n#!!top" />
+                <element signature="e#817#854#0#PHP" />
+                <element signature="n#setName#0;n#Customer#0;n#!!top" />
+                <element signature="e#936#968#0#PHP" />
+                <element signature="n#getFamily#0;n#Customer#0;n#!!top" />
+                <element signature="e#1048#1087#0#PHP" />
+                <element signature="n#setFamily#0;n#Customer#0;n#!!top" />
+                <element signature="e#1177#1209#0#PHP" />
+                <element signature="n#getMobile#0;n#Customer#0;n#!!top" />
+                <element signature="e#1289#1328#0#PHP" />
+                <element signature="n#setMobile#0;n#Customer#0;n#!!top" />
+                <element signature="e#1418#1450#0#PHP" />
+                <element signature="n#getAddress#0;n#Customer#0;n#!!top" />
+                <element signature="e#1532#1572#0#PHP" />
+                <element signature="n#setAddress#0;n#Customer#0;n#!!top" />
+                <element signature="e#1666#1698#0#PHP" />
+                <element signature="n#getTelephone#0;n#Customer#0;n#!!top" />
+                <element signature="e#1784#1826#0#PHP" />
+                <element signature="n#setTelephone#0;n#Customer#0;n#!!top" />
+                <element signature="n#__toString#0;n#Customer#0;n#!!top" />
+                <element signature="e#1983#2318#0#PHP" />
+                <element signature="e#2553#2591#0#PHP" />
+                <element signature="n#getOrderItems#0;n#Order#0;n#!!top" />
+                <element signature="e#2733#3111#0#PHP" />
+                <element signature="e#2733#2830#0#PHP" />
+                <element signature="e#2853#2896#0#PHP" />
+                <element signature="e#3151#3194#0#PHP" />
+                <element signature="n#setOrderItems#0;n#Order#0;n#!!top" />
+                <element signature="e#3300#3335#0#PHP" />
+                <element signature="n#getCustomer#0;n#Order#0;n#!!top" />
+                <element signature="e#3419#3460#0#PHP" />
+                <element signature="n#setCustomer#0;n#Order#0;n#!!top" />
+                <element signature="e#3564#3622#0#PHP" />
+                <element signature="n#getCreateDate#0;n#Order#0;n#!!top" />
+                <element signature="e#3714#3758#0#PHP" />
+                <element signature="n#setCreateDate#0;n#Order#0;n#!!top" />
+                <element signature="e#3867#3899#0#PHP" />
+                <element signature="n#getTaker#0;n#Order#0;n#!!top" />
+                <element signature="e#3977#4015#0#PHP" />
+                <element signature="n#setTaker#0;n#Order#0;n#!!top" />
+                <element signature="e#4101#4133#0#PHP" />
+                <element signature="n#getSerial#0;n#Order#0;n#!!top" />
+                <element signature="e#4213#4252#0#PHP" />
+                <element signature="n#setSerial#0;n#Order#0;n#!!top" />
+                <element signature="e#4342#4374#0#PHP" />
+                <element signature="n#getOrderStatus#0;n#Order#0;n#!!top" />
+                <element signature="e#4464#4508#0#PHP" />
+                <element signature="n#setOrderStatus#0;n#Order#0;n#!!top" />
+                <element signature="e#4690#4754#0#PHP" />
+                <element signature="e#5287#5319#0#PHP" />
+                <element signature="n#getPrice#0;n#OrderItem#0;n#!!top" />
+                <element signature="e#5397#5435#0#PHP" />
+                <element signature="n#setPrice#0;n#OrderItem#0;n#!!top" />
+                <element signature="e#5522#5556#0#PHP" />
+                <element signature="n#getProduct#0;n#OrderItem#0;n#!!top" />
+                <element signature="e#5638#5678#0#PHP" />
+                <element signature="n#setProduct#0;n#OrderItem#0;n#!!top" />
+                <element signature="e#5772#5804#0#PHP" />
+                <element signature="n#getCount#0;n#OrderItem#0;n#!!top" />
+                <element signature="e#5882#5920#0#PHP" />
+                <element signature="n#setCount#0;n#OrderItem#0;n#!!top" />
+                <element signature="n#__toString#0;n#OrderItem#0;n#!!top" />
+                <element signature="e#6151#6300#0#PHP" />
+                <element signature="n#User#0;n#!!top" />
+                <element signature="e#6459#6491#0#PHP" />
+                <element signature="n#getMobile#0;n#User#0;n#!!top" />
+                <element signature="e#6571#6610#0#PHP" />
+                <element signature="n#setMobile#0;n#User#0;n#!!top" />
+                <element signature="e#6700#6732#0#PHP" />
+                <element signature="n#getName#0;n#User#0;n#!!top" />
+                <element signature="e#6808#6845#0#PHP" />
+                <element signature="n#setName#0;n#User#0;n#!!top" />
+                <element signature="e#6927#6959#0#PHP" />
+                <element signature="n#getRole#0;n#User#0;n#!!top" />
+                <element signature="e#7035#7072#0#PHP" />
+                <element signature="n#setRole#0;n#User#0;n#!!top" />
+                <element signature="e#7154#7186#0#PHP" />
+                <element signature="n#getPassword#0;n#User#0;n#!!top" />
+                <element signature="e#7270#7311#0#PHP" />
+                <element signature="n#setPassword#0;n#User#0;n#!!top" />
+                <element signature="n#Product#0;n#!!top" />
+                <element signature="e#7490#7522#0#PHP" />
+                <element signature="n#getPrice#0;n#Product#0;n#!!top" />
+                <element signature="e#7600#7638#0#PHP" />
+                <element signature="n#setPrice#0;n#Product#0;n#!!top" />
+                <element signature="e#7725#7757#0#PHP" />
+                <element signature="n#getSerial#0;n#Product#0;n#!!top" />
+                <element signature="e#7837#7876#0#PHP" />
+                <element signature="n#setSerial#0;n#Product#0;n#!!top" />
+                <element signature="e#7966#7998#0#PHP" />
+                <element signature="n#getName#0;n#Product#0;n#!!top" />
+                <element signature="e#8074#8111#0#PHP" />
+                <element signature="n#setName#0;n#Product#0;n#!!top" />
+                <element signature="n#__toString#0;n#Product#0;n#!!top" />
+                <element signature="e#8247#8383#0#PHP" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/head.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="22">
+              <caret line="1" selection-start-line="1" selection-start-column="2" selection-end-line="3" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/actions.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="298">
@@ -110,8 +217,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/add-to-cart.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="10" column="15" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
+            <state relative-caret-position="242">
+              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
             </state>
           </provider>
         </entry>
@@ -155,13 +262,13 @@
         <option value="$PROJECT_DIR$/data/orders/5142867.txt" />
         <option value="$PROJECT_DIR$/customers-list.php" />
         <option value="$PROJECT_DIR$/init-customer-order.php" />
-        <option value="$PROJECT_DIR$/add-to-cart.php" />
-        <option value="$PROJECT_DIR$/head.php" />
         <option value="$PROJECT_DIR$/login.php" />
         <option value="$PROJECT_DIR$/new-customer-order.php" />
-        <option value="$PROJECT_DIR$/entities.php" />
-        <option value="$PROJECT_DIR$/new-order.php" />
         <option value="$PROJECT_DIR$/actions.php" />
+        <option value="$PROJECT_DIR$/new-order.php" />
+        <option value="$PROJECT_DIR$/add-to-cart.php" />
+        <option value="$PROJECT_DIR$/entities.php" />
+        <option value="$PROJECT_DIR$/head.php" />
       </list>
     </option>
   </component>
@@ -235,12 +342,12 @@
       <option name="presentableId" value="Default" />
       <updated>1574253951010</updated>
       <workItem from="1574253952197" duration="229000" />
-      <workItem from="1574259412192" duration="29558000" />
+      <workItem from="1574259412192" duration="29920000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29787000" />
+    <option name="totallyTimeSpent" value="30149000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="450" width="1920" height="1082" extended-state="6" />
@@ -469,24 +576,10 @@
     <entry file="file://$PROJECT_DIR$/data/orders/2814504.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/add-to-cart.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="15" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/foot.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/head.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -511,17 +604,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/entities.php">
+    <entry file="file://$PROJECT_DIR$/actions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="204" column="5" selection-start-line="204" selection-start-column="5" selection-end-line="204" selection-end-column="5" />
+        <state relative-caret-position="298">
+          <caret line="250" lean-forward="true" selection-start-line="250" selection-end-line="250" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/new-order.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="24" column="13" lean-forward="true" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+        <state relative-caret-position="681">
+          <caret line="73" column="43" selection-start-line="73" selection-start-column="43" selection-end-line="73" selection-end-column="43" />
           <folding>
             <element signature="e#658#722#0#HTML" />
             <element signature="e#702#705#0#PHP" />
@@ -539,19 +632,135 @@
             <element signature="e#1728#1731#0#PHP" />
             <element signature="e#1802#1908#0#HTML" />
             <element signature="e#1854#1857#0#PHP" />
-            <element signature="e#2496#2819#0#HTML" />
-            <element signature="e#2562#2800#0#HTML" />
-            <element signature="e#2579#2637#0#HTML" />
-            <element signature="e#2654#2710#0#HTML" />
-            <element signature="e#2727#2784#0#HTML" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/actions.php">
+    <entry file="file://$PROJECT_DIR$/add-to-cart.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="250" lean-forward="true" selection-start-line="250" selection-end-line="250" />
+        <state relative-caret-position="242">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/entities.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="681">
+          <caret line="289" column="15" lean-forward="true" selection-start-line="289" selection-start-column="15" selection-end-line="289" selection-end-column="15" />
+          <folding>
+            <element signature="n#Customer#0;n#!!top" />
+            <element signature="e#184#216#0#PHP" />
+            <element signature="n#getRegisteredBy#0;n#Customer#0;n#!!top" />
+            <element signature="e#308#353#0#PHP" />
+            <element signature="n#setRegisteredBy#0;n#Customer#0;n#!!top" />
+            <element signature="e#468#500#0#PHP" />
+            <element signature="n#getSerial#0;n#Customer#0;n#!!top" />
+            <element signature="e#580#619#0#PHP" />
+            <element signature="n#setSerial#0;n#Customer#0;n#!!top" />
+            <element signature="e#709#741#0#PHP" />
+            <element signature="n#getName#0;n#Customer#0;n#!!top" />
+            <element signature="e#817#854#0#PHP" />
+            <element signature="n#setName#0;n#Customer#0;n#!!top" />
+            <element signature="e#936#968#0#PHP" />
+            <element signature="n#getFamily#0;n#Customer#0;n#!!top" />
+            <element signature="e#1048#1087#0#PHP" />
+            <element signature="n#setFamily#0;n#Customer#0;n#!!top" />
+            <element signature="e#1177#1209#0#PHP" />
+            <element signature="n#getMobile#0;n#Customer#0;n#!!top" />
+            <element signature="e#1289#1328#0#PHP" />
+            <element signature="n#setMobile#0;n#Customer#0;n#!!top" />
+            <element signature="e#1418#1450#0#PHP" />
+            <element signature="n#getAddress#0;n#Customer#0;n#!!top" />
+            <element signature="e#1532#1572#0#PHP" />
+            <element signature="n#setAddress#0;n#Customer#0;n#!!top" />
+            <element signature="e#1666#1698#0#PHP" />
+            <element signature="n#getTelephone#0;n#Customer#0;n#!!top" />
+            <element signature="e#1784#1826#0#PHP" />
+            <element signature="n#setTelephone#0;n#Customer#0;n#!!top" />
+            <element signature="n#__toString#0;n#Customer#0;n#!!top" />
+            <element signature="e#1983#2318#0#PHP" />
+            <element signature="e#2553#2591#0#PHP" />
+            <element signature="n#getOrderItems#0;n#Order#0;n#!!top" />
+            <element signature="e#2733#3111#0#PHP" />
+            <element signature="e#2733#2830#0#PHP" />
+            <element signature="e#2853#2896#0#PHP" />
+            <element signature="e#3151#3194#0#PHP" />
+            <element signature="n#setOrderItems#0;n#Order#0;n#!!top" />
+            <element signature="e#3300#3335#0#PHP" />
+            <element signature="n#getCustomer#0;n#Order#0;n#!!top" />
+            <element signature="e#3419#3460#0#PHP" />
+            <element signature="n#setCustomer#0;n#Order#0;n#!!top" />
+            <element signature="e#3564#3622#0#PHP" />
+            <element signature="n#getCreateDate#0;n#Order#0;n#!!top" />
+            <element signature="e#3714#3758#0#PHP" />
+            <element signature="n#setCreateDate#0;n#Order#0;n#!!top" />
+            <element signature="e#3867#3899#0#PHP" />
+            <element signature="n#getTaker#0;n#Order#0;n#!!top" />
+            <element signature="e#3977#4015#0#PHP" />
+            <element signature="n#setTaker#0;n#Order#0;n#!!top" />
+            <element signature="e#4101#4133#0#PHP" />
+            <element signature="n#getSerial#0;n#Order#0;n#!!top" />
+            <element signature="e#4213#4252#0#PHP" />
+            <element signature="n#setSerial#0;n#Order#0;n#!!top" />
+            <element signature="e#4342#4374#0#PHP" />
+            <element signature="n#getOrderStatus#0;n#Order#0;n#!!top" />
+            <element signature="e#4464#4508#0#PHP" />
+            <element signature="n#setOrderStatus#0;n#Order#0;n#!!top" />
+            <element signature="e#4690#4754#0#PHP" />
+            <element signature="e#5287#5319#0#PHP" />
+            <element signature="n#getPrice#0;n#OrderItem#0;n#!!top" />
+            <element signature="e#5397#5435#0#PHP" />
+            <element signature="n#setPrice#0;n#OrderItem#0;n#!!top" />
+            <element signature="e#5522#5556#0#PHP" />
+            <element signature="n#getProduct#0;n#OrderItem#0;n#!!top" />
+            <element signature="e#5638#5678#0#PHP" />
+            <element signature="n#setProduct#0;n#OrderItem#0;n#!!top" />
+            <element signature="e#5772#5804#0#PHP" />
+            <element signature="n#getCount#0;n#OrderItem#0;n#!!top" />
+            <element signature="e#5882#5920#0#PHP" />
+            <element signature="n#setCount#0;n#OrderItem#0;n#!!top" />
+            <element signature="n#__toString#0;n#OrderItem#0;n#!!top" />
+            <element signature="e#6151#6300#0#PHP" />
+            <element signature="n#User#0;n#!!top" />
+            <element signature="e#6459#6491#0#PHP" />
+            <element signature="n#getMobile#0;n#User#0;n#!!top" />
+            <element signature="e#6571#6610#0#PHP" />
+            <element signature="n#setMobile#0;n#User#0;n#!!top" />
+            <element signature="e#6700#6732#0#PHP" />
+            <element signature="n#getName#0;n#User#0;n#!!top" />
+            <element signature="e#6808#6845#0#PHP" />
+            <element signature="n#setName#0;n#User#0;n#!!top" />
+            <element signature="e#6927#6959#0#PHP" />
+            <element signature="n#getRole#0;n#User#0;n#!!top" />
+            <element signature="e#7035#7072#0#PHP" />
+            <element signature="n#setRole#0;n#User#0;n#!!top" />
+            <element signature="e#7154#7186#0#PHP" />
+            <element signature="n#getPassword#0;n#User#0;n#!!top" />
+            <element signature="e#7270#7311#0#PHP" />
+            <element signature="n#setPassword#0;n#User#0;n#!!top" />
+            <element signature="n#Product#0;n#!!top" />
+            <element signature="e#7490#7522#0#PHP" />
+            <element signature="n#getPrice#0;n#Product#0;n#!!top" />
+            <element signature="e#7600#7638#0#PHP" />
+            <element signature="n#setPrice#0;n#Product#0;n#!!top" />
+            <element signature="e#7725#7757#0#PHP" />
+            <element signature="n#getSerial#0;n#Product#0;n#!!top" />
+            <element signature="e#7837#7876#0#PHP" />
+            <element signature="n#setSerial#0;n#Product#0;n#!!top" />
+            <element signature="e#7966#7998#0#PHP" />
+            <element signature="n#getName#0;n#Product#0;n#!!top" />
+            <element signature="e#8074#8111#0#PHP" />
+            <element signature="n#setName#0;n#Product#0;n#!!top" />
+            <element signature="n#__toString#0;n#Product#0;n#!!top" />
+            <element signature="e#8247#8383#0#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/head.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" selection-start-line="1" selection-start-column="2" selection-end-line="3" selection-end-column="25" />
         </state>
       </provider>
     </entry>
