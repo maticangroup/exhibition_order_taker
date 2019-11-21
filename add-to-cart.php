@@ -25,7 +25,6 @@ $getOrder->setOrderItems($alreadyAddedOrderItems);
 
 remove_order($getOrder->getSerial());
 
-
 save('order', $getOrder);
 
 redirect('/new-order.php?cid=' . $customerId);
