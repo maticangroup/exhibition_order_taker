@@ -230,7 +230,18 @@ function retrieve($type, $serial, $instance = false)
                 $order->setOrderStatus($content['orderStatus']);
                 $order->setCustomer(retrieve('customer', $content['customer'], true));
                 $order->setCreateDate($content['createDate']);
-                $order->setOrderItems($content['orderItems']);
+                $orderItemsList = [];
+                $orderItems = $content['orderItems'];
+                foreach ($orderItems as $orderItem) {
+                    $orderItem = json_decode($orderItem, true);
+                    $orderItemModel = new OrderItem();
+                    $orderItemModel->setProduct(retrieve('product', $orderItem['product']));
+                    $orderItemModel->setCount($orderItem['count']);
+                    $orderItemModel->setPrice($orderItem['price']);
+                    $orderItemsList[] = $orderItemModel;
+                }
+
+                $order->setOrderItems($orderItemsList);
 
                 return $order;
             }
@@ -284,7 +295,7 @@ function import_products()
 
 function remove_customer_order($orderSerial)
 {
-    $path = get_path(__DIR__ . '/data/products/' . $orderSerial . '.txt');
+    $path = get_path(__DIR__ . '/data/orders/' . $orderSerial . '.txt');
     unlink($path);
     return true;
 }

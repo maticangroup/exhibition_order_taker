@@ -28,9 +28,9 @@ $orderItem->setCount($count);
 
 $alreadyAddedOrderItems[] = (string)$orderItem;
 
+$getOrder->setCustomer($customerId);
 
-
-$getOrder->setOrderItems(json_encode($alreadyAddedOrderItems));
+$getOrder->setOrderItems($alreadyAddedOrderItems);
 
 remove_customer_order($getOrder->getSerial());
 
@@ -39,3 +39,4 @@ save('order', $getOrder);
 redirect('/new-order.php?cid=' . $customerId);
 
 
+//die("sss");
