@@ -42,7 +42,10 @@ $orders = get_all('orders');
                         <tbody>
                         <?php
                         $totalPrice = 0;
-                        foreach ($orders as $order): ?>
+                        foreach ($orders as $order):
+//                            print_r($order);
+//                        die;
+                            ?>
                             <tr>
                                 <td><?= $order->getCreateDate(); ?></td>
                                 <td><?= $order->getTaker(); ?></td>

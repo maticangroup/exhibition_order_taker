@@ -9,7 +9,7 @@ endif;
 ?>
 <?php
 if (isset($_REQUEST['customer-name'])) {
-    
+
     $customer = new Customer();
     $customer->setSerial(get_serial());
     $customer->setName($_REQUEST['customer-name']);

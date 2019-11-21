@@ -130,8 +130,8 @@ class Customer
             'serial' => $this->getSerial(),
             'name' => $this->getName(),
             'address' => $this->getAddress(),
-            'family' => $this->getMobile(),
-            'mobile' => $this->getFamily(),
+            'family' => $this->getFamily(),
+            'mobile' => $this->getMobile(),
             'telephone' => $this->getTelephone(),
             'registered_by' => $this->getRegisteredBy()
         ];

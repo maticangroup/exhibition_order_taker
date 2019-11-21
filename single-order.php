@@ -31,7 +31,6 @@ $order = retrieve('order', $_REQUEST['cid'], true);
                                 <th>Product Count</th>
                                 <th>Product Price</th>
                                 <th>Total Product Price</th>
-<!--                                <th>Action</th>-->
                             </tr>
                             </thead>
                             <tbody>
@@ -48,15 +47,6 @@ $order = retrieve('order', $_REQUEST['cid'], true);
                                             document.write(addCommas( <?= (str_replace([','], '', $orderItem->getPrice()) * $orderItem->getCount()) ?> ))
                                         </script>
                                     </td>
-<!--                                    <td>-->
-<!--                                        <form action="remove-from-cart.php">-->
-<!--                                            <input type="hidden" name="cid" value="--><?//= $_REQUEST['cid'] ?><!--">-->
-<!--                                            <input type="hidden" name="product_id"-->
-<!--                                                   value="--><?//= $orderItem->getProduct()->getSerial() ?><!--">-->
-<!--                                            <input type="submit" class="btn btn-rounded btn-danger" value="remove">-->
-<!--                                        </form>-->
-<!--                                    </td>-->
-
                                 </tr>
                                 <?php $totalPrice += str_replace([','], '', $orderItem->getPrice()) * $orderItem->getCount(); endforeach; ?>
 

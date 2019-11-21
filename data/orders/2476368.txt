@@ -1,1 +1,0 @@
-{"customer":2476368,"serial":"2476368","createDate":"12-12-12","orderStatus":"open","orderTaker":"09120342273","orderItems":[]}

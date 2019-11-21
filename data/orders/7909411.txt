@@ -1,1 +1,0 @@
-{"customer":"7909411","serial":"7909411","createDate":"12-12-12","orderStatus":"open","orderTaker":"09120342273","orderItems":["{\"price\":\"130,000\",\"product\":\"--368\",\"count\":\"12\"}","{\"price\":\"110,000\",\"product\":\"7000100023012--23\",\"count\":\"12\"}","{\"price\":\"271,000\",\"product\":\"7000100017012--17\",\"count\":\"121\"}"]}
