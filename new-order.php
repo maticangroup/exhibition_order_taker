@@ -41,7 +41,7 @@ if (isset($_REQUEST['q'])) {
     </div>
     <div class="single-order-section">
         <div class="search">
-            <form  action="new-order.php">
+            <form action="new-order.php">
                 <input type="hidden" value="<?= $_REQUEST['cid'] ?>" name="cid">
                 <input class="search-input" type="search" placeholder="search for product..."
                        value="<?= (isset($_REQUEST['q'])) ? ($_REQUEST['q']) : "" ?>" name="q">
@@ -71,19 +71,22 @@ if (isset($_REQUEST['q'])) {
             <?php endforeach; ?>
         </div>
         <div class="selected-products">
+            <?php foreach ($order->getOrderItems() as $orderItem) : ?>
+                <div class="product">
+                    <div class="order-product-serial">
 
-            <div class="product">
-                <div class="order-product-serial">
+                    </div>
+                    <div class="order-product-name">
 
+                    </div>
+                    <div class="order-product-price">
+
+                    </div>
+                    <div class="order-product-count">
+
+                    </div>
                 </div>
-                <div class="order-product-name">
-
-                </div>
-                <div class="order-product-price">
-
-                </div>
-            </div>
-
+            <?php endforeach; ?>
         </div>
     </div>
 <?php require "foot.php"; ?>

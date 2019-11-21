@@ -160,7 +160,7 @@ class Order
         if ($orderItems) {
             foreach ($orderItems as $orderItem) {
                 $orderItemModel = new OrderItem();
-//            $orderItemModel->setCount();
+//            $orderItemModel->setCount($);
 //            $orderItemModel->setProduct();
 //            $orderItemModel->setPrice();
 //            $orderItemModel->setProductSerial();
@@ -200,8 +200,9 @@ class Order
      */
     public function getCreateDate()
     {
-        $createDate = new \DateTime($this->create_date['date']);
-        return $createDate->format('Y-n-d');
+//        $createDate = new \DateTime($this->create_date['date']);
+//        return $createDate->format('Y-n-d');
+        return "12-12-12";
     }
 
     /**
@@ -260,6 +261,10 @@ class Order
         $this->orderStatus = $orderStatus;
     }
 
+    /**
+     * @return false|string
+     * @throws Exception
+     */
     public function __toString()
     {
         $orderItems = $this->getOrderItems();
@@ -268,14 +273,13 @@ class Order
         foreach ($orderItems as $orderItem) {
             $orderItemModelArray[] = (string)$orderItem;
         }
-
         $order = [
             'customer' => $this->getCustomer(),
             'serial' => $this->getSerial(),
             'createDate' => $this->getCreateDate(),
             'orderStatus' => $this->getOrderStatus(),
             'orderTaker' => $this->getTaker(),
-            'orderItems' => ''
+            'orderItems' => $orderItemModelArray
         ];
         return json_encode($order);
     }

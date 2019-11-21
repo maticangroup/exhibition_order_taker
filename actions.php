@@ -62,13 +62,18 @@ function current_user()
 
 }
 
+function get_path($path)
+{
+    return str_replace(['/', '\\'], DIRECTORY_SEPARATOR, $path);
+}
+
 function save($what, $data)
 {
     if ($what === 'customer') {
         /**
          * @var $data Customer
          */
-        $path = __DIR__ . '/data/customers';
+        $path = get_path(__DIR__ . '/data/customers');
         if (!file_exists($path)) {
             mkdir($path);
         }
@@ -78,7 +83,7 @@ function save($what, $data)
         /**
          * @var $data Order
          */
-        $path = __DIR__ . '/data/orders';
+        $path = get_path(__DIR__ . '/data/orders');
         if (!file_exists($path)) {
             mkdir($path);
         }
@@ -88,7 +93,7 @@ function save($what, $data)
         /**
          * @var $data Product
          */
-        $path = __DIR__ . '/data/products';
+        $path = get_path(__DIR__ . '/data/products');
         if (!file_exists($path)) {
             mkdir($path);
         }
@@ -100,7 +105,7 @@ function save($what, $data)
 function get_all($what)
 {
     if ($what === 'orders') {
-        $path = __DIR__ . '/data/orders';
+        $path = get_path(__DIR__ . '/data/orders');
         $orders = scandir($path);
         unset($orders[0]);
         unset($orders[1]);
@@ -113,7 +118,7 @@ function get_all($what)
         die("sss");
     }
     if ($what === 'customers') {
-        $path = __DIR__ . '/data/customers';
+        $path = get_path(__DIR__ . '/data/customers');
         $customers = scandir($path);
         unset($customers[0]);
         unset($customers[1]);
@@ -134,7 +139,7 @@ function get_all($what)
         return $customersArray;
     }
     if ($what === 'products') {
-        $path = __DIR__ . '/data/products';
+        $path = get_path(__DIR__ . '/data/products');
         $products = scandir($path);
         unset($products[0]);
         unset($products[1]);
@@ -176,7 +181,8 @@ function retrieve($type, $serial, $instance = false)
 {
 
     if ($type === 'customer') {
-        $path = __DIR__ . '/data/customers/' . $serial . '.txt';
+
+        $path = get_path(__DIR__ . '/data/customers/' . $serial . '.txt');
         if (file_exists($path)) {
             $content = file_get_contents($path);
             $serializedContent = json_decode($content, true);
@@ -196,7 +202,7 @@ function retrieve($type, $serial, $instance = false)
         return false;
     }
     if ($type === 'product') {
-        $path = __DIR__ . '/data/products/' . $serial . '.txt';
+        $path = get_path(__DIR__ . '/data/products/' . $serial . '.txt');
         if (file_exists($path)) {
             $content = file_get_contents($path);
             return json_decode($content, true);
@@ -204,7 +210,7 @@ function retrieve($type, $serial, $instance = false)
         return false;
     }
     if ($type === 'order') {
-        $path = __DIR__ . '/data/orders/' . $serial . '.txt';
+        $path = get_path(__DIR__ . '/data/orders/' . $serial . '.txt');
         if (file_exists($path)) {
 
             $content = json_decode(file_get_contents($path), true);
@@ -243,7 +249,7 @@ function get_price()
 function import_products()
 {
 
-    $path = __DIR__ . '/data/csv/products.csv';
+    $path = get_path(__DIR__ . '/data/csv/products.csv');
     $row = 1;
     $productsArray = [];
     if (($handle = fopen($path, "r")) !== FALSE) {
