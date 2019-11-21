@@ -1,5 +1,5 @@
 <?php
-session_start();
+@session_start();
 $users = [
     '09120342273' =>
         [
@@ -91,10 +91,10 @@ $permissions = [
         $actions['search_products'],
     ]
 ];
-
-function is_allowed($actionName)
-{
-    /**
-     * @todo Later
-     */
-}
+//
+//function is_allowed($actionName)
+//{
+//    /**
+//     * @todo Later
+//     */
+//}

@@ -1,11 +1,9 @@
-<<<<<<< HEAD
-=======
+
 <?php require "users.php"; ?>
 <?php require "actions.php"; ?>
 <?php require "entities.php"; ?>
 
->>>>>>> 9de9e8ba171625fda2163084a1cd282f22cb6661
-<?php require "head.php"; ?>
+
 <?php
 if (isset($_REQUEST['username'])):
     $username = $_REQUEST['username'];
@@ -14,7 +12,7 @@ if (isset($_REQUEST['username'])):
     manage_login($user, $password);
 endif;
 ?>
-
+<?php require "head.php"; ?>
 <div class="row gutter-20 mt-5">
     <div class="col-3"></div>
     <div class="col-md-6">

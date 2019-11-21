@@ -1,24 +1,15 @@
 <?php
-
-<<<<<<< HEAD
-session_start();
-=======
->>>>>>> 9de9e8ba171625fda2163084a1cd282f22cb6661
 //
 //ini_set('display_errors', 1);
 //ini_set('display_startup_errors', 1);
 //error_reporting(E_ALL);
 
 ?>
-<?php require "users.php"; ?>
-<?php require "actions.php"; ?>
-<?php require "entities.php";
-
+<?php
 if ($_SERVER['REQUEST_URI'] !== '/login.php'):
     current_user();
 endif;
 ?>
-
 
 
 <!DOCTYPE html>

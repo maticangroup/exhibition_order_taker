@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-
 <?php require "users.php"; ?>
 <?php require "actions.php"; ?>
 <?php require "entities.php"; ?>
@@ -9,7 +6,6 @@ if ($_SERVER['REQUEST_URI'] !== '/login.php'):
     current_user();
 endif;
 ?>
->>>>>>> 9de9e8ba171625fda2163084a1cd282f22cb6661
 <?php require "head.php";
 /**
  * @var $customers Customer[]
