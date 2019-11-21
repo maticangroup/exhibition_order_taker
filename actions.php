@@ -20,7 +20,7 @@ function manage_login($user, $password)
     if ($user) {
         if ($user['password'] === $password) {
 
-            success_message("Welcome " . $user['name']);
+//            success_message("Welcome " . $user['name']);
             login($user);
 
         } else {
@@ -34,7 +34,7 @@ function manage_login($user, $password)
 function login($user)
 {
     $_SESSION['user'] = $user;
-    redirect('/');
+    redirect('/orders-list.php');
     die;
 }
 

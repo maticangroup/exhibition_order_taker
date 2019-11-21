@@ -101,8 +101,8 @@ endif;
 
 
 </head>
-<body>
-
+<body style="overflow-x: hidden!important; <?= ($_SERVER['REQUEST_URI'] === '/login.php') ? "overflow:hidden;" : "" ?>">
+<?php if ($_SERVER['REQUEST_URI'] !== '/login.php'): ?>
 <!-- Wrapper Start -->
 <div class="wrapper">
     <!-- Navbar Start -->
@@ -110,8 +110,9 @@ endif;
         <!-- Navbar Header Start -->
         <div class="navbar--header">
             <!-- Logo Start -->
-            <a href="index.html" class="logo">
-                <img src="http://bitaplastic.com/wp-content/themes/bita-fa/option-tree/assets/images/logo.png"
+            <a href="/orders-list.php" class="logo">
+                <img width="100%"
+                     src="http://bitaplastic.com/wp-content/themes/bita-fa/option-tree/assets/images/logo.png"
                      alt="Bita">
             </a>
             <!-- Logo End -->
@@ -132,79 +133,75 @@ endif;
 
         <div class="navbar--nav ml-auto">
             <ul class="nav">
-                <?php if ($_SERVER['REQUEST_URI'] !== '/login.php'): ?>
-                    <!-- Nav User Start -->
-                    <li class="nav-item dropdown nav--user">
-                        <a href="#" class="nav-link">
-                            <span><?= current_user()->getName() ?></span>
-                        </a>
-                    </li>
-                    <!-- Nav User End -->
-                <?php endif; ?>
+                <!-- Nav User Start -->
+                <li class="nav-item dropdown nav--user">
+                    <a href="#" class="nav-link">
+                        <span><?= current_user()->getName() ?></span>
+                    </a>
+                </li>
+                <!-- Nav User End -->
             </ul>
         </div>
     </header>
     <!-- Navbar End -->
-
     <!-- Sidebar Start -->
     <aside class="sidebar" data-trigger="scrollbar">
 
-        <?php if ($_SERVER['REQUEST_URI'] !== '/login.php'): ?>
 
-            <!-- Sidebar Navigation Start -->
-            <div class="sidebar--nav">
-                <ul>
-                    <li>
-                        <ul>
-                            <li class="active">
-                                <a href="new-customer-order.php">
-                                    <i class="fa fa-shopping-cart"></i>
-                                    <span>New Order</span>
-                                </a>
-                            </li>
+        <!-- Sidebar Navigation Start -->
+        <div class="sidebar--nav">
+            <ul>
+                <li>
+                    <ul>
+                        <li class="active">
+                            <a href="new-customer-order.php">
+                                <i class="fa fa-shopping-cart"></i>
+                                <span>New Order</span>
+                            </a>
+                        </li>
 
-                            <li class="active">
-                                <a href="orders-list.php">
-                                    <i class="fab fa-wpforms"></i>
-                                    <span>Orders</span>
-                                </a>
-                            </li>
+                        <li class="active">
+                            <a href="orders-list.php">
+                                <i class="fab fa-wpforms"></i>
+                                <span>Orders</span>
+                            </a>
+                        </li>
 
-                            <li class="active">
-                                <a href="customers-list.php">
-                                    <i class="far fa-address-book"></i>
-                                    <span>Customers</span>
-                                </a>
-                            </li>
+                        <li class="active">
+                            <a href="customers-list.php">
+                                <i class="far fa-address-book"></i>
+                                <span>Customers</span>
+                            </a>
+                        </li>
 
-                            <li class="active">
-                                <a href="products-list.php">
-                                    <i class="fa fa-th"></i>
-                                    <span>Products</span>
-                                </a>
-                            </li>
+                        <li class="active">
+                            <a href="products-list.php">
+                                <i class="fa fa-th"></i>
+                                <span>Products</span>
+                            </a>
+                        </li>
 
-                            <li class="active">
-                                <a href="logout.php">
-                                    <i class="fa fa-power-off"></i>
-                                    <span>Logout</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-            <!-- Sidebar Navigation End -->
+                        <li class="active">
+                            <a href="logout.php">
+                                <i class="fa fa-power-off"></i>
+                                <span>Logout</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!-- Sidebar Navigation End -->
 
-
-        <?php endif; ?>
 
     </aside>
     <!-- Sidebar End -->
 
     <!-- Main Container Start -->
-    <main class="main--container">
 
+    <main class="main--container">
+        <div class="container pt-5">
+            <?php endif; ?>
 
 
 

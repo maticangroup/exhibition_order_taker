@@ -1,4 +1,3 @@
-
 <?php require "users.php"; ?>
 <?php require "actions.php"; ?>
 <?php require "entities.php"; ?>
@@ -14,19 +13,27 @@ endif;
 ?>
 <?php require "head.php"; ?>
 <div class="row gutter-20 mt-5">
-    <div class="col-3"></div>
-    <div class="col-md-6">
+    <div class="col-4"></div>
+    <div class="col-md-4">
         <!-- Panel Start -->
-        <div class="panel">
-            <div class="panel-heading">
-                <h3 class="panel-title">Login Form</h3>
+
+        <div class="row my-5">
+            <div class="col-12 text-center">
+                <img width="50%"
+                     src="http://bitaplastic.com/wp-content/themes/bita-fa/option-tree/assets/images/logo.png"
+                     alt="">
             </div>
+        </div>
+
+        <div class="panel ">
 
             <form action="login.php" class="panel-content" method="post">
+
+
                 <div class="form-group">
                     <label>
                         <span class="label-text">Username</span>
-                        <input type="text" name="username" placeholder="Enter Your Mobile Number..."
+                        <input type="text" name="username" placeholder="Mobile Number..."
                                class="form-control">
                     </label>
                 </div>
@@ -34,49 +41,47 @@ endif;
                 <div class="form-group">
                     <label>
                         <span class="label-text">Password</span>
-                        <input type="password" name="password" placeholder="Enter Your Password..."
+                        <input type="password" name="password" placeholder="Password..."
                                class="form-control">
                     </label>
                 </div>
+                <div class="form-group text-center mt-4 ">
 
-                <input type="submit" value="Submit" class="btn btn-sm btn-rounded btn-success">
+                    <input type="submit" value="Login" class="btn btn-sm btn-rounded btn-success btn-block">
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <ul class="success-messages list-unstyled">
+                            <?php
+                            if (isset($_SESSION['success_messages'])) :
+                                $success_messages = $_SESSION['success_messages'];
+                                foreach ($success_messages as $success_message) : ?>
+                                    <li class="text-success"><?= $success_message ?></li>
+                                <?php
+                                endforeach;
+                                $_SESSION['success_messages'] = [];
+                            endif;
+                            ?>
+                        </ul>
+                        <ul class="error-messages list-unstyled">
+                            <?php
+                            if (isset($_SESSION['error_messages'])) :
+                                $error_messages = $_SESSION['error_messages'];
+                                foreach ($error_messages as $error_message) :?>
+                                    <li class="text-danger"><?= $error_message ?></li>
+                                <?php
+                                endforeach;
+                                $_SESSION['error_messages'] = [];
+                            endif;
+                            ?>
+                        </ul>
+                    </div>
+                </div>
             </form>
+
         </div>
     </div>
-    <div class="col-3"></div>
+    <div class="col-4"></div>
 </div>
-
-
-<!--<div class="login-form">-->
-<!--    <form action="login.php">-->
-<!--        <div class="login-form-element">-->
-<!--            Welcome to the order taking platform-->
-<!--        </div>-->
-<!--        <div class="login-form-element">-->
-<!--            <div class="element-title">-->
-<!--                Username-->
-<!--            </div>-->
-<!--            <div class="element-input">-->
-<!--                <input name="username" type="text">-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <div class="login-form-element">-->
-<!---->
-<!--            <div class="element-title">-->
-<!--                Password-->
-<!--            </div>-->
-<!--            <div class="element-input">-->
-<!--                <input name="password" type="password">-->
-<!--            </div>-->
-<!---->
-<!--        </div>-->
-<!--        <div class="login-form-element submit">-->
-<!--            <div class="element-input">-->
-<!--                <input type="submit" value="Login">-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </form>-->
-<!--</div>-->
-
 
 <?php require "foot.php"; ?>

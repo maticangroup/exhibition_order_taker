@@ -1,40 +1,21 @@
-<ul class="success-messages">
-    <?php
-    if (isset($_SESSION['success_messages'])) :
-        $success_messages = $_SESSION['success_messages'];
-        foreach ($success_messages as $success_message) : ?>
-            <li><?= $success_message ?></li>
-        <?php
-        endforeach;
-        $_SESSION['success_messages'] = [];
-    endif;
-    ?>
-</ul>
-<ul class="error-messages">
-    <?php
-    if (isset($_SESSION['error_messages'])) :
-        $error_messages = $_SESSION['error_messages'];
-        foreach ($error_messages as $error_message) :?>
-            <li><?= $error_message ?></li>
-        <?php
-        endforeach;
-        $_SESSION['error_messages'] = [];
-    endif;
-    ?>
-</ul>
-
-
-
-<!-- Main Footer Start -->
-<footer class="main--footer main--footer-light">
-    <p>Copyright &copy; <a href="#">Matican</a>. All Rights Reserved.</p>
-</footer>
-<!-- Main Footer End -->
-</main>
-<!-- Main Container End -->
-</div>
 <!-- Wrapper End -->
+<?php if ($_SERVER['REQUEST_URI'] !== '/login.php'): ?>
+    </div>
+    <!-- Main Footer End -->
+    <footer class="main--footer main--footer-light  p-3 text-center">
+        <p>Copyright &copy; <a href="http://matican.org" target="_blank">Matican</a>. All Rights Reserved.</p>
+    </footer>
+    </main>
+    <!-- Main Footer Start -->
 
+    <!-- Main Container End -->
+    </div>
+
+<?php else: ?>
+    <footer class="main--footer main--footer-light fixed-bottom p-3 text-center">
+        <p>Copyright &copy; <a href="http://matican.org" target="_blank">Matican</a>. All Rights Reserved.</p>
+    </footer>
+<?php endif; ?>
 <!-- Scripts -->
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/jquery-ui.min.js"></script>
