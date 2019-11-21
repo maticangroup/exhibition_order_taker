@@ -15,9 +15,6 @@ require "head.php";
  */
 $order = retrieve('order', $_REQUEST['cid'], true);
 
-
-print_r($order);
-die("sss");
 /**
  * @var $products Product[]
  */
