@@ -34,22 +34,22 @@ function manage_login($user, $password)
 function login($user)
 {
     $_SESSION['user'] = $user;
-    header('Location: /');
-    return true;
+    redirect('/');
+    die;
 }
 
 
 function logout()
 {
     unset($_SESSION['user']);
-    header('Location: /login.php');
-    return true;
+    redirect('/login.php');
+    die;
 }
 
 function current_user()
 {
     if (!isset($_SESSION['user'])) {
-        header('Location: /login.php');
+        redirect('/login.php');
         die;
     } else {
         $userFromSession = $_SESSION['user'];

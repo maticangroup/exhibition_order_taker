@@ -1,6 +1,5 @@
 <?php require "head.php";
 
-current_user();
 ?>
     <h1>Single order</h1>
     <div class="single-order-section">

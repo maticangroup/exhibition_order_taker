@@ -1,6 +1,4 @@
 <?php require "head.php";
-
-current_user();
 ?>
     <div class="form">
         <form action="#">
