@@ -57,7 +57,7 @@ if (isset($_REQUEST['q'])) {
                             <?= $order->getCustomer()->getName() ?> <?= $order->getCustomer()->getFamily() ?></h3>
                         <p class="miniStats--caption"><?= $order->getCreateDate() ?> </p>
 
-                        <p class="miniStats--num"<?= $order->getOrderStatus() ?></p>
+                        <p class="miniStats--num"><?= $order->getOrderStatus() ?></p>
                     </div>
                 </div>
                 <!-- Mini Stats Panel End -->
@@ -145,13 +145,16 @@ if (isset($_REQUEST['q'])) {
                             </tr>
                             </thead>
                             <tbody>
-                            <?php foreach ($order->getOrderItems() as $orderItem) : ?>
+                            <?php
+
+
+                            foreach ($order->getOrderItems() as $orderItem) :?>
                                 <tr>
                                     <td><?= $orderItem->getProduct()->getSerial(); ?></td>
                                     <td><?= $orderItem->getProduct()->getName(); ?></td>
                                     <td><?= $orderItem->getCount(); ?></td>
                                     <td><?= $orderItem->getPrice() ?></td>
-                                    <td><?= ($orderItem->getPrice() * $orderItem->getCount()) ?></td>
+                                    <td><?= (str_replace([','], '', $orderItem->getPrice()) * $orderItem->getCount()) ?></td>
                                 </tr>
                             <?php endforeach; ?>
 

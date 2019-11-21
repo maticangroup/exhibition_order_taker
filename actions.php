@@ -235,7 +235,7 @@ function retrieve($type, $serial, $instance = false)
                 foreach ($orderItems as $orderItem) {
                     $orderItem = json_decode($orderItem, true);
                     $orderItemModel = new OrderItem();
-                    $orderItemModel->setProduct(retrieve('product', $orderItem['product']));
+                    $orderItemModel->setProduct(retrieve('product', $orderItem['product'], true));
                     $orderItemModel->setCount($orderItem['count']);
                     $orderItemModel->setPrice($orderItem['price']);
                     $orderItemsList[] = $orderItemModel;
