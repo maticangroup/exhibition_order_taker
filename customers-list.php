@@ -26,34 +26,59 @@ if (isset($_REQUEST['q'])) {
     }
 }
 ?>
-<h1>Customer list</h1>
-<div class="search">
-    <form action="customers-list.php">
-        <label>
-            Search for customers
-            <input type="search" name="q" value="<?= (isset($_REQUEST['q'])) ? ($_REQUEST['q']) : "" ?>">
-        </label>
-    </form>
-</div>
-<div class="customers">
-    <?php foreach ($customers as $customer): ?>
-        <div class="customer">
-            <div class="name">
-                <?= $customer->getName() . ' ' . $customer->getFamily() ?>
-            </div>
-            <div class="mobile">
-                <?= $customer->getMobile() ?>
-            </div>
-            <div class="address">
-                <?= $customer->getAddress() ?>
-            </div>
-            <div class="registered_by">
-                <?= $customer->getRegisteredBy() ?>
-            </div>
-            <div class="options">
-                <a href="init-customer-order.php?cid=<?= $customer->getSerial() ?>">Add Order</a>
+
+
+<div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="panel">
+            <div class="records--header">
+                <div class="title fa-shopping-bag">
+                    <h3 class="h3">All Customers</h3>
+                    <p>Found Total <?= count($customers); ?> Customers</p>
+                </div>
+
+                <div class="actions">
+                    <form action="customers-list.php" class="search flex-wrap flex-md-nowrap">
+                        <input type="search" class="form-control" name="q"
+                               value="<?= (isset($_REQUEST['q'])) ? ($_REQUEST['q']) : "" ?>"
+                               placeholder="Customer Name...">
+                        <button type="submit" class="btn btn-rounded"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
             </div>
         </div>
-    <?php endforeach; ?>
+    </div>
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="panel">
+            <div class="records--list" data-title="Customer Listing">
+                <table id="recordsListView">
+                    <thead>
+                    <tr>
+                        <th>Customer Name</th>
+                        <th>Customer Mobile</th>
+                        <th>Customer Address</th>
+                        <th>Customer Register Date</th>
+                        <th class="not-sortable">Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <?php foreach ($customers as $customer): ?>
+                        <tr>
+                            <td><?= $customer->getName() . ' ' . $customer->getFamily() ?></td>
+                            <td><?= $customer->getMobile() ?></td>
+                            <td><?= $customer->getAddress() ?></td>
+                            <td><?= $customer->getRegisteredBy() ?></td>
+                            <td>
+                                <a href="init-customer-order.php?cid=<?= $customer->getSerial() ?>"
+                                   class="btn btn-rounded btn-info">Make an Order</a>
+                            </td>
+
+                        </tr>
+                    <?php endforeach; ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 </div>
 <?php require "foot.php"; ?>
