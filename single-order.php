@@ -11,6 +11,33 @@ endif;
 $order = retrieve('order', $_REQUEST['cid'], true);
 ?>
     <div class="row">
+
+        <div class="col-4"></div>
+        <div class="col-md-4 col-sm-12 col-xs-12">
+            <div class="panel">
+                <!-- Mini Stats Panel Start -->
+                <div class="miniStats--panel text-white bg-blue">
+                    <div class="miniStats--header" data-overlay="0.1">
+                        <p class="miniStats--label text-blue bg-white">
+                            <span>New Order</span>
+                        </p>
+                    </div>
+
+                    <div class="miniStats--body">
+                        <i class="miniStats--icon fa fa-user text-white"></i>
+
+                        <h3 class="miniStats--title h4 text-white">
+                            <?= $order->getCustomer()->getName() ?> <?= $order->getCustomer()->getFamily() ?></h3>
+                        <p class="miniStats--caption"><?= $order->getCreateDate() ?> </p>
+
+                        <p class="miniStats--num"><?= $order->getOrderStatus() ?></p>
+                    </div>
+                </div>
+                <!-- Mini Stats Panel End -->
+            </div>
+        </div>
+        <div class="col-4"></div>
+
         <div class="col-md-12 col-sm-12 col-xs-12">
             <div class="panel">
                 <!-- Invoice Start -->

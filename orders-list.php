@@ -41,7 +41,6 @@ $orders = get_all('orders');
                         </thead>
                         <tbody>
                         <?php
-                        $totalPrice = 0;
                         foreach ($orders as $order):
 //                            print_r($order);
 //                        die;
@@ -55,10 +54,15 @@ $orders = get_all('orders');
                                  * @var $items OrderItem[]
                                  */
                                 $items = $order->getOrderItems();
+                                $totalPrice = 0;
                                 foreach ($items as $item): ?>
                                     <?php $totalPrice += (str_replace(",", "", $item->getPrice()) * $item->getCount()) ?>
-                                    <td><?= $totalPrice; ?></td>
                                 <?php endforeach; ?>
+                                <td>
+                                    <script>
+                                        document.write(addCommas( <?= $totalPrice; ?> ))
+                                    </script>
+                                </td>
                                 <td>
                                     <a href="single-order.php?cid=<?= $order->getSerial() ?>"
                                        class="btn btn-rounded btn-info">View</a>
