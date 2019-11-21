@@ -4,7 +4,7 @@ $users = [
     '09120342273' =>
         [
             'mobile' => '09120342273',
-            'name' => 'حسین عظیمی',
+            'name' => 'Hossein Azimi',
             'role' => 'admin',
             'password' => '123456'
         ],
@@ -18,51 +18,51 @@ $users = [
     '09382706764' =>
         [
             'mobile' => '09382706764',
-            'name' => 'زهرا توکلی',
+            'name' => 'Zahra Tavakoli',
             'role' => 'user',
             'password' => '123456'
         ],
     '09388450169' =>
         [
             'mobile' => '09388450169',
-            'name' => 'تبلت کارخانه',
+            'name' => 'Factory Tablet',
             'role' => 'user',
-            'password' => '123456'
+            'password' => '654321'
         ],
     '09192331008' =>
         [
             'mobile' => '09192331008',
-            'name' => 'حامد فتح آبادی',
+            'name' => 'Hamed Fath Abbadi',
             'role' => 'user',
-            'password' => '123456'
+            'password' => '987654'
         ],
     '09128702568' =>
         [
             'mobile' => '09128702568',
-            'name' => 'جاوید ثنایی',
+            'name' => 'Javid Sanaee',
             'role' => 'user',
-            'password' => '123456'
+            'password' => '456789'
         ],
     '09192694398' =>
         [
             'mobile' => '09192694398',
-            'name' => 'محمد خداویسی',
+            'name' => 'Mohammad Khodaveysi',
             'role' => 'user',
-            'password' => '123456'
+            'password' => '147258'
         ],
     '09121259673' =>
         [
             'mobile' => '09121259673',
-            'name' => 'مهرداد مهرانفر',
+            'name' => 'Mehrdad Mehranfar',
             'role' => 'user',
-            'password' => '123456'
+            'password' => '369258'
         ],
     '09394091279' =>
         [
             'mobile' => '09394091279',
-            'name' => 'میثم محمودی',
+            'name' => 'Meysam Mahmoudi',
             'role' => 'user',
-            'password' => '123456'
+            'password' => '852963'
         ]
 ];
 $actions = [
