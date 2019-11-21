@@ -10,108 +10,70 @@ endif;
 <?php require "head.php";
 $order = retrieve('order', $_REQUEST['cid'], true);
 ?>
-    <h1>Single order</h1>
-    <div class="single-order-section">
-        <div class="search"></div>
-        <div class="search-results">
-            <div class="result">
-                <div class="product-serial">
-                    123123123
-                </div>
-                <div class="product-name">
-                    This is the product name
-                </div>
-                <div class="product-price">
-                    12,000,000
-                </div>
-            </div>
-            <div class="result">
-                <div class="product-serial">
-                    123123123
-                </div>
-                <div class="product-name">
-                    This is the product name
-                </div>
-                <div class="product-price">
-                    12,000,000
-                </div>
-            </div>
-            <div class="result">
-                <div class="product-serial">
-                    123123123
-                </div>
-                <div class="product-name">
-                    This is the product name
-                </div>
-                <div class="product-price">
-                    12,000,000
-                </div>
-            </div>
-            <div class="result">
-                <div class="product-serial">
-                    123123123
-                </div>
-                <div class="product-name">
-                    This is the product name
-                </div>
-                <div class="product-price">
-                    12,000,000
-                </div>
-            </div>
-            <div class="result">
-                <div class="product-serial">
-                    123123123
-                </div>
-                <div class="product-name">
-                    This is the product name
-                </div>
-                <div class="product-price">
-                    12,000,000
-                </div>
-            </div>
-            <div class="result">
-                <div class="product-serial">
-                    123123123
-                </div>
-                <div class="product-name">
-                    This is the product name
-                </div>
-                <div class="product-price">
-                    12,000,000
-                </div>
-            </div>
-            <div class="result">
-                <div class="product-serial">
-                    123123123
-                </div>
-                <div class="product-name">
-                    This is the product name
-                </div>
-                <div class="product-price">
-                    12,000,000
-                </div>
-            </div>
-            <div class="result">
-                <div class="product-serial">
-                    123123123
-                </div>
-                <div class="product-name">
-                    This is the product name
-                </div>
-                <div class="product-price">
-                    12,000,000
-                </div>
-            </div>
-        </div>
-        <div class="selected-products">
-            <div class="order-product-serial">
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="panel">
+                <!-- Invoice Start -->
+                <div class="invoice">
+                    <div class="invoice--header">
+                        <div class="invoice--logo">
+                            <img src="http://bitaplastic.com/wp-content/themes/bita-fa/option-tree/assets/images/logo.png"
+                                 alt="Bita">
+                        </div>
+                    </div>
 
-            </div>
-            <div class="order-product-name">
+                    <div class="invoice--order">
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th>Product Serial</th>
+                                <th>Product Name</th>
+                                <th>Product Count</th>
+                                <th>Product Price</th>
+                                <th>Total Product Price</th>
+<!--                                <th>Action</th>-->
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <?php
+                            $totalPrice = 0;
+                            foreach ($order->getOrderItems() as $orderItem) :?>
+                                <tr>
+                                    <td><?= $orderItem->getProduct()->getSerial(); ?></td>
+                                    <td><?= $orderItem->getProduct()->getName(); ?></td>
+                                    <td><?= $orderItem->getCount(); ?></td>
+                                    <td><?= $orderItem->getPrice() ?></td>
+                                    <td>
+                                        <script>
+                                            document.write(addCommas( <?= (str_replace([','], '', $orderItem->getPrice()) * $orderItem->getCount()) ?> ))
+                                        </script>
+                                    </td>
+<!--                                    <td>-->
+<!--                                        <form action="remove-from-cart.php">-->
+<!--                                            <input type="hidden" name="cid" value="--><?//= $_REQUEST['cid'] ?><!--">-->
+<!--                                            <input type="hidden" name="product_id"-->
+<!--                                                   value="--><?//= $orderItem->getProduct()->getSerial() ?><!--">-->
+<!--                                            <input type="submit" class="btn btn-rounded btn-danger" value="remove">-->
+<!--                                        </form>-->
+<!--                                    </td>-->
 
-            </div>
-            <div class="order-product-price">
+                                </tr>
+                                <?php $totalPrice += str_replace([','], '', $orderItem->getPrice()) * $orderItem->getCount(); endforeach; ?>
 
+                            <tr>
+                                <td colspan="4"><strong>Total Price</strong></td>
+                                <td>
+                                    <script>
+                                        document.write(addCommas( <?= $totalPrice; ?> ))
+                                    </script>
+                                </td>
+                                <td></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- Invoice End -->
             </div>
         </div>
     </div>
