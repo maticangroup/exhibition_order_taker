@@ -146,21 +146,29 @@ if (isset($_REQUEST['q'])) {
                             </thead>
                             <tbody>
                             <?php
-
-
+                            $totalPrice = 0;
                             foreach ($order->getOrderItems() as $orderItem) :?>
                                 <tr>
                                     <td><?= $orderItem->getProduct()->getSerial(); ?></td>
                                     <td><?= $orderItem->getProduct()->getName(); ?></td>
                                     <td><?= $orderItem->getCount(); ?></td>
                                     <td><?= $orderItem->getPrice() ?></td>
-                                    <td><?= (str_replace([','], '', $orderItem->getPrice()) * $orderItem->getCount()) ?></td>
+                                    <td>
+                                        <script>
+                                            document.write(addCommas( <?= (str_replace([','], '', $orderItem->getPrice()) * $orderItem->getCount()) ?> ))
+                                        </script>
+                                    </td>
+
                                 </tr>
-                            <?php endforeach; ?>
+                                <?php $totalPrice += str_replace([','], '', $orderItem->getPrice()) * $orderItem->getCount(); endforeach; ?>
 
                             <tr>
                                 <td colspan="4"><strong>Total Price</strong></td>
-                                <td>Static</td>
+                                <td>
+                                    <script>
+                                        document.write(addCommas( <?= $totalPrice; ?> ))
+                                    </script>
+                                </td>
                             </tr>
                             </tbody>
                         </table>
