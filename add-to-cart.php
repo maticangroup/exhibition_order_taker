@@ -1,5 +1,7 @@
-<?php
-require "head.php";
+<?php require "users.php"; ?>
+<?php require "actions.php"; ?>
+<?php require "entities.php";
+
 
 $customerId = $_REQUEST['cid'];
 $productId = $_REQUEST['product_id'];

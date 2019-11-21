@@ -1,20 +1,13 @@
 <?php
 
-session_start();
 //
 //ini_set('display_errors', 1);
 //ini_set('display_startup_errors', 1);
 //error_reporting(E_ALL);
 
 ?>
-<?php require "users.php"; ?>
-<?php require "actions.php"; ?>
-<?php require "entities.php";
 
-if ($_SERVER['REQUEST_URI'] !== '/login.php'):
-    current_user();
-endif;
-?>
+
 
 <!DOCTYPE html>
 <html dir="ltr" lang="en" class="no-outlines">
@@ -89,8 +82,6 @@ endif;
 
         <div class="navbar--nav ml-auto">
             <ul class="nav">
-
-
                 <?php if ($_SERVER['REQUEST_URI'] !== '/login.php'): ?>
                     <!-- Nav User Start -->
                     <li class="nav-item dropdown nav--user">

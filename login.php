@@ -1,3 +1,7 @@
+<?php require "users.php"; ?>
+<?php require "actions.php"; ?>
+<?php require "entities.php"; ?>
+
 <?php require "head.php"; ?>
 <?php
 if (isset($_REQUEST['username'])):
