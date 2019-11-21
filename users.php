@@ -7,6 +7,13 @@ $users = [
             'role' => 'admin',
             'password' => '123456'
         ],
+    '09122930611' =>
+        [
+            'mobile' => '09122930611',
+            'name' => 'Amirhossein',
+            'role' => 'admin',
+            'password' => '123'
+        ],
     '09382706764' =>
         [
             'mobile' => '09382706764',

@@ -3,6 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="62d9aa91-de9b-4265-8951-4420b45f6188" name="Default Changelist" comment="">
 <<<<<<< HEAD
+      <change beforePath="$PROJECT_DIR$/actions.php" beforeDir="false" afterPath="$PROJECT_DIR$/actions.php" afterDir="false" />
+=======
+<<<<<<< HEAD
       <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/assets/css/bootstrap.min.css" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/assets/css/datatables.min.css" afterDir="false" />
@@ -140,12 +143,14 @@
       <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
 =======
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+>>>>>>> 7e706003d88a7dbf46a686d9886e44be667565f2
       <change beforePath="$PROJECT_DIR$/add-to-cart.php" beforeDir="false" afterPath="$PROJECT_DIR$/add-to-cart.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/orders/1651181.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/orders/2814504.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/entities.php" beforeDir="false" afterPath="$PROJECT_DIR$/entities.php" afterDir="false" />
+<<<<<<< HEAD
+=======
       <change beforePath="$PROJECT_DIR$/new-order.php" beforeDir="false" afterPath="$PROJECT_DIR$/new-order.php" afterDir="false" />
 >>>>>>> d975ffaa29c5e57041e2c750b80ba3c823df3f59
+>>>>>>> 7e706003d88a7dbf46a686d9886e44be667565f2
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -166,8 +171,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/new-order.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="681">
-              <caret line="73" column="43" selection-start-line="73" selection-start-column="43" selection-end-line="73" selection-end-column="43" />
+            <state relative-caret-position="703">
+              <caret line="86" column="25" selection-start-line="86" selection-start-column="25" selection-end-line="86" selection-end-column="25" />
               <folding>
                 <element signature="e#658#722#0#HTML" />
                 <element signature="e#702#705#0#PHP" />
@@ -214,8 +219,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/entities.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="681">
-              <caret line="289" column="15" lean-forward="true" selection-start-line="289" selection-start-column="15" selection-end-line="289" selection-end-column="15" />
+            <state relative-caret-position="696">
+              <caret line="178" selection-start-line="178" selection-end-line="178" />
               <folding>
                 <element signature="n#Customer#0;n#!!top" />
                 <element signature="e#184#216#0#PHP" />
@@ -249,12 +254,7 @@
                 <element signature="n#__toString#0;n#Customer#0;n#!!top" />
                 <element signature="e#1983#2318#0#PHP" />
                 <element signature="e#2553#2591#0#PHP" />
-                <element signature="n#getOrderItems#0;n#Order#0;n#!!top" />
-                <element signature="e#2733#3111#0#PHP" />
-                <element signature="e#2733#2830#0#PHP" />
-                <element signature="e#2853#2896#0#PHP" />
                 <element signature="e#3151#3194#0#PHP" />
-                <element signature="n#setOrderItems#0;n#Order#0;n#!!top" />
                 <element signature="e#3300#3335#0#PHP" />
                 <element signature="n#getCustomer#0;n#Order#0;n#!!top" />
                 <element signature="e#3419#3460#0#PHP" />
@@ -276,6 +276,10 @@
                 <element signature="e#4464#4508#0#PHP" />
                 <element signature="n#setOrderStatus#0;n#Order#0;n#!!top" />
                 <element signature="e#4690#4754#0#PHP" />
+                <element signature="n#__toString#0;n#Order#0;n#!!top" />
+                <element signature="e#4743#4847#0#PHP" />
+                <element signature="e#4866#5153#0#PHP" />
+                <element signature="n#OrderItem#0;n#!!top" />
                 <element signature="e#5287#5319#0#PHP" />
                 <element signature="n#getPrice#0;n#OrderItem#0;n#!!top" />
                 <element signature="e#5397#5435#0#PHP" />
@@ -327,11 +331,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/head.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22">
-              <caret line="1" selection-start-line="1" selection-start-column="2" selection-end-line="3" selection-end-column="25" />
+            <state relative-caret-position="396">
+              <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -339,9 +343,14 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/actions.php">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+            <state relative-caret-position="520">
+              <caret line="91" column="30" lean-forward="true" selection-start-line="91" selection-start-column="30" selection-end-line="91" selection-end-column="30" />
+=======
             <state relative-caret-position="298">
               <caret line="250" lean-forward="true" selection-start-line="250" selection-end-line="250" />
 >>>>>>> d975ffaa29c5e57041e2c750b80ba3c823df3f59
+>>>>>>> 7e706003d88a7dbf46a686d9886e44be667565f2
             </state>
           </provider>
         </entry>
@@ -377,11 +386,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/add-to-cart.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="616">
+              <caret line="28" column="46" selection-start-line="28" selection-start-column="46" selection-end-line="28" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -431,8 +440,13 @@
         <option value="$PROJECT_DIR$/login.php" />
 >>>>>>> d975ffaa29c5e57041e2c750b80ba3c823df3f59
         <option value="$PROJECT_DIR$/new-customer-order.php" />
-        <option value="$PROJECT_DIR$/actions.php" />
         <option value="$PROJECT_DIR$/new-order.php" />
+<<<<<<< HEAD
+        <option value="$PROJECT_DIR$/head.php" />
+        <option value="$PROJECT_DIR$/entities.php" />
+        <option value="$PROJECT_DIR$/actions.php" />
+        <option value="$PROJECT_DIR$/add-to-cart.php" />
+=======
 <<<<<<< HEAD
         <option value="$PROJECT_DIR$/head.php" />
         <option value="$PROJECT_DIR$/foot.php" />
@@ -442,6 +456,7 @@
         <option value="$PROJECT_DIR$/entities.php" />
         <option value="$PROJECT_DIR$/head.php" />
 >>>>>>> d975ffaa29c5e57041e2c750b80ba3c823df3f59
+>>>>>>> 7e706003d88a7dbf46a686d9886e44be667565f2
       </list>
     </option>
   </component>
@@ -528,15 +543,22 @@
       <updated>1574253951010</updated>
       <workItem from="1574253952197" duration="229000" />
 <<<<<<< HEAD
+      <workItem from="1574259412192" duration="30633000" />
+=======
+<<<<<<< HEAD
       <workItem from="1574259412192" duration="29090000" />
       <workItem from="1574343308644" duration="987000" />
 =======
       <workItem from="1574259412192" duration="29920000" />
 >>>>>>> d975ffaa29c5e57041e2c750b80ba3c823df3f59
+>>>>>>> 7e706003d88a7dbf46a686d9886e44be667565f2
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
+    <option name="totallyTimeSpent" value="30862000" />
+=======
 <<<<<<< HEAD
     <option name="totallyTimeSpent" value="30306000" />
   </component>
@@ -544,6 +566,7 @@
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
 =======
     <option name="totallyTimeSpent" value="30149000" />
+>>>>>>> 7e706003d88a7dbf46a686d9886e44be667565f2
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="450" width="1920" height="1082" extended-state="6" />
@@ -765,6 +788,12 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/new-order.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="703">
+          <caret line="86" column="25" selection-start-line="86" selection-start-column="25" selection-end-line="86" selection-end-column="25" />
+=======
     <entry file="file://$PROJECT_DIR$/data/products/700100345072--345.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -808,6 +837,7 @@
 =======
         <state relative-caret-position="681">
           <caret line="73" column="43" selection-start-line="73" selection-start-column="43" selection-end-line="73" selection-end-column="43" />
+>>>>>>> 7e706003d88a7dbf46a686d9886e44be667565f2
           <folding>
             <element signature="e#658#722#0#HTML" />
             <element signature="e#702#705#0#PHP" />
@@ -831,6 +861,8 @@
       </provider>
     </entry>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     <entry file="file://$USER_HOME$/Desktop/New folder/New folder/elements-dadmin-responsive-bootstrap-admin-dashboard-MADV95-2018-07-25/dadmin_main-files-v1.1/dadmin/form-elements.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -846,10 +878,11 @@
         </state>
       </provider>
     </entry>
+>>>>>>> 7e706003d88a7dbf46a686d9886e44be667565f2
     <entry file="file://$PROJECT_DIR$/entities.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="681">
-          <caret line="289" column="15" lean-forward="true" selection-start-line="289" selection-start-column="15" selection-end-line="289" selection-end-column="15" />
+        <state relative-caret-position="696">
+          <caret line="178" selection-start-line="178" selection-end-line="178" />
           <folding>
             <element signature="n#Customer#0;n#!!top" />
             <element signature="e#184#216#0#PHP" />
@@ -883,12 +916,7 @@
             <element signature="n#__toString#0;n#Customer#0;n#!!top" />
             <element signature="e#1983#2318#0#PHP" />
             <element signature="e#2553#2591#0#PHP" />
-            <element signature="n#getOrderItems#0;n#Order#0;n#!!top" />
-            <element signature="e#2733#3111#0#PHP" />
-            <element signature="e#2733#2830#0#PHP" />
-            <element signature="e#2853#2896#0#PHP" />
             <element signature="e#3151#3194#0#PHP" />
-            <element signature="n#setOrderItems#0;n#Order#0;n#!!top" />
             <element signature="e#3300#3335#0#PHP" />
             <element signature="n#getCustomer#0;n#Order#0;n#!!top" />
             <element signature="e#3419#3460#0#PHP" />
@@ -910,6 +938,10 @@
             <element signature="e#4464#4508#0#PHP" />
             <element signature="n#setOrderStatus#0;n#Order#0;n#!!top" />
             <element signature="e#4690#4754#0#PHP" />
+            <element signature="n#__toString#0;n#Order#0;n#!!top" />
+            <element signature="e#4743#4847#0#PHP" />
+            <element signature="e#4866#5153#0#PHP" />
+            <element signature="n#OrderItem#0;n#!!top" />
             <element signature="e#5287#5319#0#PHP" />
             <element signature="n#getPrice#0;n#OrderItem#0;n#!!top" />
             <element signature="e#5397#5435#0#PHP" />
@@ -962,9 +994,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/head.php">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="396">
+          <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/actions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="91" column="30" lean-forward="true" selection-start-line="91" selection-start-column="30" selection-end-line="91" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/add-to-cart.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="616">
+          <caret line="28" column="46" selection-start-line="28" selection-start-column="46" selection-end-line="28" selection-end-column="46" />
+=======
         <state relative-caret-position="22">
           <caret line="1" selection-start-line="1" selection-start-column="2" selection-end-line="3" selection-end-column="25" />
 >>>>>>> d975ffaa29c5e57041e2c750b80ba3c823df3f59
+>>>>>>> 7e706003d88a7dbf46a686d9886e44be667565f2
         </state>
       </provider>
     </entry>

@@ -1,5 +1,12 @@
 <?php require "head.php"; ?>
-
+<?php
+if (isset($_REQUEST['username'])):
+    $username = $_REQUEST['username'];
+    $password = $_REQUEST['password'];
+    $user = (isset($users[$username])) ? $users[$username] : null;
+    manage_login($user, $password);
+endif;
+?>
 
 <div class="row gutter-20 mt-5">
     <div class="col-3"></div>
@@ -10,18 +17,20 @@
                 <h3 class="panel-title">Login Form</h3>
             </div>
 
-            <form action="login.php" class="panel-content">
+            <form action="login.php" class="panel-content" method="post">
                 <div class="form-group">
                     <label>
                         <span class="label-text">Username</span>
-                        <input type="text" name="username" placeholder="Enter Your Mobile Number..." class="form-control">
+                        <input type="text" name="username" placeholder="Enter Your Mobile Number..."
+                               class="form-control">
                     </label>
                 </div>
 
                 <div class="form-group">
                     <label>
                         <span class="label-text">Password</span>
-                        <input type="password" name="password" placeholder="Enter Your Password..." class="form-control">
+                        <input type="password" name="password" placeholder="Enter Your Password..."
+                               class="form-control">
                     </label>
                 </div>
 
@@ -31,9 +40,6 @@
     </div>
     <div class="col-3"></div>
 </div>
-
-
-
 
 
 <!--<div class="login-form">-->
@@ -67,14 +73,5 @@
 <!--    </form>-->
 <!--</div>-->
 
-
-<?php
-if (isset($_REQUEST['username'])):
-    $username = $_REQUEST['username'];
-    $password = $_REQUEST['password'];
-    $user = (isset($users[$username])) ? $users[$username] : null;
-    manage_login($user, $password);
-endif;
-?>
 
 <?php require "foot.php"; ?>

@@ -1,6 +1,4 @@
 <?php require "head.php";
-
-current_user();
 /**
  * @var $customers Customer[]
  */
