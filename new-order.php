@@ -70,7 +70,7 @@ if (isset($_REQUEST['q'])) {
                 <div class="records--header">
                     <div class="title fa-shopping-bag">
                         <h3 class="h3">All Products</h3>
-                        <p>Found Total 1,330 Products</p>
+                        <p>Found Total <?= count($products); ?> Products</p>
                     </div>
 
                     <div class="actions">
@@ -78,8 +78,7 @@ if (isset($_REQUEST['q'])) {
                             <input type="hidden" value="<?= $_REQUEST['cid'] ?>" name="cid">
                             <input type="search" class="form-control" name="q"
                                    value="<?= (isset($_REQUEST['q'])) ? ($_REQUEST['q']) : "" ?>"
-                                   placeholder="Product Name..."
-                                   required="">
+                                   placeholder="Product Name...">
                             <button type="submit" class="btn btn-rounded"><i class="fa fa-search"></i></button>
                         </form>
                     </div>
@@ -143,21 +142,23 @@ if (isset($_REQUEST['q'])) {
                                 <th>Product Name</th>
                                 <th>Product Count</th>
                                 <th>Product Price</th>
+                                <th>Total Product Price</th>
                             </tr>
                             </thead>
                             <tbody>
                             <?php foreach ($order->getOrderItems() as $orderItem) : ?>
                                 <tr>
-                                    <td>#12345678</td>
-                                    <td>20 Inch Philips LCD Black Color Monitor</td>
-                                    <td>12</td>
-                                    <td>$75.00</td>
+                                    <td><?= $orderItem->getProduct()->getSerial(); ?></td>
+                                    <td><?= $orderItem->getProduct()->getName(); ?></td>
+                                    <td><?= $orderItem->getCount(); ?></td>
+                                    <td><?= $orderItem->getPrice() ?></td>
+                                    <td><?= ($orderItem->getPrice() * $orderItem->getCount()) ?></td>
                                 </tr>
                             <?php endforeach; ?>
 
                             <tr>
-                                <td colspan="3"><strong>Subtotal</strong></td>
-                                <td>$1750.00</td>
+                                <td colspan="4"><strong>Total Price</strong></td>
+                                <td>Static</td>
                             </tr>
                             </tbody>
                         </table>

@@ -27,32 +27,50 @@ if (isset($_REQUEST['q'])) {
     }
 }
 ?>
-    <h1>Products list</h1>
-    <div class="products-list-section">
-        <div class="product-search">
-            <form action="#">
-                <label>
-                    <input type="search" placeholder="Search for products..." name="q"
-                           value="<?= (isset($_REQUEST['q'])) ? ($_REQUEST['q']) : "" ?>">
-                </label>
-            </form>
-        </div>
 
-        <div class="products-list">
-            <?php foreach ($products as $product) : ?>
-                <div class="product">
-                    <div class="product-barcode">
-                        <?= $product->getSerial() ?>
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="panel">
+                <div class="records--header">
+                    <div class="title fa-shopping-bag">
+                        <h3 class="h3">All Products</h3>
+                        <p>Found Total <?= count($products); ?> Products</p>
                     </div>
-                    <div class="product-name">
-                        <?= $product->getName() ?>
-                    </div>
-                    <div class="product-price">
-                        <?= $product->getPrice() ?>
+
+                    <div class="actions">
+                        <form action="products-list.php" class="search flex-wrap flex-md-nowrap">
+                            <input type="search" class="form-control" name="q"
+                                   value="<?= (isset($_REQUEST['q'])) ? ($_REQUEST['q']) : "" ?>"
+                                   placeholder="Product Name...">
+                            <button type="submit" class="btn btn-rounded"><i class="fa fa-search"></i></button>
+                        </form>
                     </div>
                 </div>
-            <?php endforeach; ?>
+            </div>
+        </div>
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="panel">
+                <div class="records--list" data-title="Product Listing">
+                    <table id="recordsListView">
+                        <thead>
+                        <tr>
+                            <th>Serial</th>
+                            <th>Product Name</th>
+                            <th>Product Price</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <?php foreach ($products as $product) : ?>
+                            <tr>
+                                <td><?= $product->getSerial() ?></td>
+                                <td><?= $product->getName() ?></td>
+                                <td><?= $product->getPrice() ?></td>
+                            </tr>
+                        <?php endforeach; ?>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
     </div>
-
 <?php require "foot.php"; ?>
